@@ -1,5 +1,6 @@
 package com.filsum.service;
 
+import com.filsum.model.Runner;
 import com.filsum.repository.RunRepository;
 import com.filsum.repository.RunnerRepository;
 import org.slf4j.Logger;
@@ -18,6 +19,17 @@ public class RegisterService {
 
     @Autowired
     private RunRepository runRepository;
+
+    /**
+     * creates a new runner, if the email does not exist
+     * @param runner
+     * @return
+     */
+    public Runner createRunner(Runner runner){
+
+        runnerRepository.findByEmail(runner.getEmail());
+        return runnerRepository.save(runner);
+    }
 
 
 }

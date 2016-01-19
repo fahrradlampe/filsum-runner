@@ -8,13 +8,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Filsum Runner</a>
+
+            <a class="navbar-brand" href="#">
+                <img alt="Titel" src="/images/bwlogoklein.jpg">
+            </a>
         </div>
 
         <!-- Alle Navigationslinks, Formulare und anderer Inhalt werden hier zusammengefasst und können dann ein- und ausgeblendet werden -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Link <span class="sr-only">(aktuell)</span></a></li>
+                <li class=""><a href="/register">Anmeldung</a></li>
                 <li><a href="#">Link</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menü <span class="caret"></span></a>

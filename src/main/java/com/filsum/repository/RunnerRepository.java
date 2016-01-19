@@ -13,4 +13,7 @@ import java.util.List;
 @Repository
 public interface RunnerRepository extends JpaRepository<Runner, Long> {
 
+
+    List<Runner> findByEmail(String email);
+
 }
