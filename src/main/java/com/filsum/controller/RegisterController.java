@@ -22,7 +22,7 @@ public class RegisterController {
     public String register(Model model) {
         log.debug("register user");
 
-        return "register";
+        return "register/register";
     }
 
 

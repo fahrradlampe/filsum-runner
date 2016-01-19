@@ -1,9 +1,9 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Titel und Schalter werden für eine bessere mobile Ansicht zusammengefasst -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Navigation ein-/ausblenden</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -11,17 +11,43 @@
             <a class="navbar-brand" href="#">Filsum Runner</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" >
+        <!-- Alle Navigationslinks, Formulare und anderer Inhalt werden hier zusammengefasst und können dann ein- und ausgeblendet werden -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="register"><a href="/customer/all">Anmeldung</a></li>
-                <li class="runnerlist"><a href="/product/all">Starterliste</a></li>
+                <li class="active"><a href="#">Link <span class="sr-only">(aktuell)</span></a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menü <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Aktion</a></li>
+                        <li><a href="#">Andere Aktion</a></li>
+                        <li><a href="#">Irgendwas anderes</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Abgetrennter Link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Noch ein abgetrennter Link</a></li>
+                    </ul>
+                </li>
             </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Suchen">
+                </div>
+                <button type="submit" class="btn btn-default">Los</button>
+            </form>
             <ul class="nav navbar-nav navbar-right">
-                <li class="config"><a href="/logout">Abmelden</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menü <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Aktion</a></li>
+                        <li><a href="#">Andere Aktion</a></li>
+                        <li><a href="#">Irgendwas anderes</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Abgetrennter Link</a></li>
+                    </ul>
+                </li>
             </ul>
-
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
