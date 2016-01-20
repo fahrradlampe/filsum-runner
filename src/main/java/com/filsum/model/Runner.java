@@ -7,6 +7,7 @@ import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -39,6 +40,10 @@ public class Runner implements Serializable {
     private String zip;
 
     private String country;
+
+    private String phone;
+
+    private Date birthdate;
 
     @Id
     @GeneratedValue
@@ -121,5 +126,21 @@ public class Runner implements Serializable {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Date getBirthdate() {
+        return birthdate;
+    }
+
+    public void setBirthdate(Date birthdate) {
+        this.birthdate = birthdate;
     }
 }

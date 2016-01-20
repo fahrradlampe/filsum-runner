@@ -27,7 +27,7 @@ public class RegisterController {
     @RequestMapping(value = "/register")
     public String registerView(Model model) {
         log.debug("register runner view");
-
+        model.addAttribute("runner", new Runner());
         return "register/register";
     }
 
