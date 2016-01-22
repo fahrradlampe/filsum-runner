@@ -45,6 +45,8 @@ public class Runner implements Serializable {
 
     private Date birthdate;
 
+    private List<Participation> participation;
+
     @Id
     @GeneratedValue
     public Long getRunnerId() {
@@ -142,5 +144,14 @@ public class Runner implements Serializable {
 
     public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
+    }
+
+    @OneToMany(mappedBy = "run", fetch = FetchType.EAGER)
+    public List<Participation> getParticipation() {
+        return participation;
+    }
+
+    public void setParticipation(List<Participation> participation) {
+        this.participation = participation;
     }
 }

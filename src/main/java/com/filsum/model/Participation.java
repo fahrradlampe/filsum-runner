@@ -1,21 +1,22 @@
 package com.filsum.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 @Entity
 @XmlRootElement
-@Table(name = "participant")
+@Table(name = "participation")
 public class Participation implements Serializable {
 
     // id
     private Long participationId;
 
     private Long time;
+
+    private Run run;
+
+    private Runner runner;
 
     @Id
     @GeneratedValue
@@ -33,5 +34,23 @@ public class Participation implements Serializable {
 
     public void setTime(Long time) {
         this.time = time;
+    }
+
+    @ManyToOne
+    public Run getRun() {
+        return run;
+    }
+
+    public void setRun(Run run) {
+        this.run = run;
+    }
+
+    @ManyToOne
+    public Runner getRunner() {
+        return runner;
+    }
+
+    public void setRunner(Runner runner) {
+        this.runner = runner;
     }
 }

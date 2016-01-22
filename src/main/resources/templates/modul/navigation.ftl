@@ -10,47 +10,24 @@
             </button>
 
             <a class="navbar-brand" href="#">
-                <img alt="Titel" src="/images/bwlogoklein.jpg">
+                <!--img alt="Titel" src="/images/bwlogoklein.jpg"-->
             </a>
         </div>
 
         <!-- Alle Navigationslinks, Formulare und anderer Inhalt werden hier zusammengefasst und können dann ein- und ausgeblendet werden -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+                <li class=""><a href="/index">Home</a></li>
                 <li class=""><a href="/register">Anmeldung</a></li>
-                <li><a href="#">Link</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menü <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Aktion</a></li>
-                        <li><a href="#">Andere Aktion</a></li>
-                        <li><a href="#">Irgendwas anderes</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Abgetrennter Link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Noch ein abgetrennter Link</a></li>
-                    </ul>
-                </li>
+                <li class=""><a href="/participantslist">Teilnehmerliste</a></li>
+                <li class=""><a href="/register">Sponsoren</a></li>
+                <li class=""><a href="/map">Anfahrt</a></li>
+                <li class=""><a href="/register">Ergebnisse</a></li>
+                <li class=""><a href="/images">Bilder</a></li>
+                <li class=""><a href="/register">Kontakt</a></li>
+
             </ul>
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Suchen">
-                </div>
-                <button type="submit" class="btn btn-default">Los</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menü <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Aktion</a></li>
-                        <li><a href="#">Andere Aktion</a></li>
-                        <li><a href="#">Irgendwas anderes</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Abgetrennter Link</a></li>
-                    </ul>
-                </li>
-            </ul>
+
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>

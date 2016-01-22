@@ -4,8 +4,15 @@
 
     <#include "../modul/navigation.ftl">
 
+<div class="main">
 <div class="container">
 
+
+    <#if formError??>
+        <div class="alert alert-danger">
+        ${formError}
+        </div>
+    </#if>
 
     <div class="col-lg-10 col-lg-offset-1">
         <form name="runner" class="form-horizontal" action="/register/add" role="form"
@@ -14,10 +21,28 @@
             <@spring.bind path="runner" />
 
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Anmeldung</h3>
-                </div>
                 <div class="panel-body">
+
+                    <div class="form-group">
+
+                        <label class="control-label col-sm-2" for="runs">Strecke:</label>
+
+                        <div class="col-sm-10">
+
+
+                            <ul name="selectedRuns" id="selectedRuns" class="nav nav-pills registration">
+                                <#list runs as run>
+                                <li class="">
+                                    <a href="#tab28-1-km" data-toggle="tab">
+                                        ${run.name}
+                                    </a>
+                                </li>
+                                </#list>
+                            </ul>
+                        </div>
+
+                    </div>
+
 
                     <div class="form-group">
 
@@ -29,6 +54,8 @@
                             <input type="text" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Eingabe Name" required>
                         </div>
                     </div>
+
+
                     <div class="form-group">
                         <@spring.bind path="runner.forename" />
 
@@ -58,15 +85,15 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <@spring.bind path="runner.birthdate" />
+                    <!--div class="form-group">
+                        <!--@spring.bind path="runner.birthdate" /-->
 
-                        <label class="control-label col-sm-2">Geburtstag:</label>
+                        <!--label class="control-label col-sm-2">Geburtstag:</label>
 
                         <div class="col-sm-10">
-                            <input type="date" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Birthdate" required>
+                            <input type="date" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Eingabe Geburtsdatum" required>
                         </div>
-                    </div>
+                    </div-->
 
                     <div class="form-group">
                         <@spring.bind path="runner.street" />
@@ -74,7 +101,7 @@
                         <label class="control-label col-sm-2" for="postalAddress">Straße:</label>
 
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Street">
+                            <input type="text" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Eingabe Straße">
                         </div>
                     </div>
 
@@ -84,7 +111,7 @@
                         <label class="control-label col-sm-2" for="streetnumber">Hausnummer:</label>
 
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Streetnumber">
+                            <input type="text" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Eingabe Hausnummer">
                         </div>
                     </div>
 
@@ -94,7 +121,7 @@
                         <label class="control-label col-sm-2" for="ZipCode">Postleitzahl:</label>
 
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Zip Code" required>
+                            <input type="text" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Eingabe Postleitzahl" required>
                         </div>
                     </div>
 
@@ -104,35 +131,11 @@
                         <label class="control-label col-sm-2" for="city">Stadt:</label>
 
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Stadt">
+                            <input type="text" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Eingabe Stadt">
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <@spring.bind path="runner.gender" />
 
-                        <label class="control-label col-sm-2">Geschlecht:</label>
-
-                        <div class="col-sm-5">
-                            <label class="radio-inline">
-                                <input type="radio" name="genderRadios" value="m"> Männlich
-                            </label>
-                        </div>
-                        <div class="col-sm-5">
-                            <label class="radio-inline">
-                                <input type="radio" name="genderRadios" value="f"> Weiblich
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <@spring.bind path="runner.gender" />
-
-                        <label class="control-label col-sm-2" for="pwd">Passwort:</label>
-
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Enter password">
-                        </div>
-                    </div>
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
@@ -146,6 +149,6 @@
     </div>
 
 </div>
-
+</div>
 
 </@layout.default>

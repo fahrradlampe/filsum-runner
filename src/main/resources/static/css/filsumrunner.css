@@ -1,8 +1,8 @@
 .navbar-default {
-    background-image: -webkit-linear-gradient(top, #8FACF1 0%, #4471DC 100%);
-    background-image: -o-linear-gradient(top, #8FACF1 0%, #4471DC 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#8FACF1), to(#4471DC));
-    background-image: linear-gradient(to bottom, #8FACF1 0%, #4471DC 100%);
+    background-image: -webkit-linear-gradient(top, #FFF 0%, #FFF 100%);
+    background-image: -o-linear-gradient(top, #FFF 0%, #FFF 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#FFF));
+    background-image: linear-gradient(to bottom, #FFF 0%, #FFF 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -19,4 +19,21 @@
 }
 .navbar-default .navbar-nav > li > a {
     color: #1D1B1B;
+}
+.main{
+    background-image: url('../images/marathon.jpg');
+    height: 989px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.panel{
+    opacity: 0.9;
+}
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
 }

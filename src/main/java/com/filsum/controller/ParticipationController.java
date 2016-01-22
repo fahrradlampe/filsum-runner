@@ -3,6 +3,7 @@ package com.filsum.controller;
 import com.filsum.model.Participation;
 import com.filsum.model.Run;
 import com.filsum.model.Runner;
+import com.filsum.service.ParticipationService;
 import com.filsum.service.RegisterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,33 +20,30 @@ import java.util.List;
  * @author Katrin Mischok
  */
 @Controller
-public class RegisterController {
+public class ParticipationController {
 
     private static final String REGISTER = "register";
 
-    private final Logger log = LoggerFactory.getLogger(RegisterController.class);
+    private final Logger log = LoggerFactory.getLogger(ParticipationController.class);
+
+    @Autowired
+    private ParticipationService participationService;
 
     @Autowired
     private RegisterService registerService;
 
-    @RequestMapping(value = "/register")
+    @RequestMapping(value = "/participantslist")
     public String registerView(Model model) {
-        log.debug("register runner view");
-        model.addAttribute("runner", new Runner());
-        model.addAttribute("activeRunId", "test");
+        log.debug("participants list");
 
         List<Run> runs = registerService.findActualRuns();
+        Run actualRun = runs.get(0);
         model.addAttribute("runs", runs);
-        return "register/register";
+        model.addAttribute("actualRunId", actualRun.getRunId());
+
+        List<Participation> particpiants = participationService.findParticipants(actualRun);
+        model.addAttribute("participants", particpiants);
+
+        return "startlist";
     }
-
-    @RequestMapping(value = "/register/add", method = RequestMethod.POST)
-    public String registerAdd(Model model, @ModelAttribute("runner") Runner runner, @ModelAttribute("selectedRuns") String activeRunId) {
-        log.debug("add new runner");
-
-        registerService.createRunner(runner);
-
-        return "register/register";
-    }
-
 }

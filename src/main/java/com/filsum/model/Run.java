@@ -4,8 +4,9 @@ package com.filsum.model;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
-
+import java.util.List;
 
 @Entity
 @XmlRootElement
@@ -20,6 +21,12 @@ public class Run implements Serializable {
     private Long distance;
 
     private Date startDate;
+
+    private BigDecimal charge;
+
+    private Date participationDeadline;
+
+    private List<Participation> participation;
 
     @Id
     @GeneratedValue
@@ -53,5 +60,30 @@ public class Run implements Serializable {
 
     public void setStartDate(Date startDate) {
         this.startDate = startDate;
+    }
+
+    @OneToMany(mappedBy = "run", fetch = FetchType.EAGER)
+    public List<Participation> getParticipation() {
+        return participation;
+    }
+
+    public void setParticipation(List<Participation> participation) {
+        this.participation = participation;
+    }
+
+    public Date getParticipationDeadline() {
+        return participationDeadline;
+    }
+
+    public void setParticipationDeadline(Date participationDeadline) {
+        this.participationDeadline = participationDeadline;
+    }
+
+    public BigDecimal getCharge() {
+        return charge;
+    }
+
+    public void setCharge(BigDecimal charge) {
+        this.charge = charge;
     }
 }
