@@ -2,7 +2,6 @@ package com.filsum.service;
 
 import com.filsum.model.Participation;
 import com.filsum.model.Run;
-import com.filsum.model.Runner;
 import com.filsum.repository.ParticipationRepository;
 import com.filsum.repository.RunRepository;
 import com.filsum.repository.RunnerRepository;

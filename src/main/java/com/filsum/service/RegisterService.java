@@ -26,8 +26,8 @@ public class RegisterService {
 
     /**
      * creates a new runner, if the email does not exist
-     * @param runner
-     * @return
+     * @param runner runner
+     * @return created runner
      */
     public Runner createRunner(Runner runner){
 
