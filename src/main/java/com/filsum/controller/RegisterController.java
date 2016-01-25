@@ -3,6 +3,7 @@ package com.filsum.controller;
 import com.filsum.model.Participation;
 import com.filsum.model.Run;
 import com.filsum.model.Runner;
+import com.filsum.model.RunnerFormData;
 import com.filsum.service.RegisterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -31,7 +33,7 @@ public class RegisterController {
     @RequestMapping(value = "/register")
     public String registerView(Model model) {
         log.debug("register runner view");
-        model.addAttribute("runner", new Runner());
+        model.addAttribute("runnerData", new RunnerFormData());
         model.addAttribute("activeRunId", "test");
 
         List<Run> runs = registerService.findActualRuns();
@@ -40,12 +42,12 @@ public class RegisterController {
     }
 
     @RequestMapping(value = "/register/add", method = RequestMethod.POST)
-    public String registerAdd(Model model, @ModelAttribute("runner") Runner runner, @ModelAttribute("selectedRuns") String activeRunId) {
+    public String registerAdd( Model model, @ModelAttribute("runnerData") RunnerFormData runnerData) {
         log.debug("add new runner");
 
-        registerService.createRunner(runner);
+        registerService.createParticipation(runnerData);
 
-        return "register/register";
+        return "register/registerSucess";
     }
 
 }

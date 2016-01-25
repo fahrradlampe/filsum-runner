@@ -28,8 +28,8 @@ public class ParticipationService {
     @Autowired
     private ParticipationRepository participationRepository;
 
-    public List<Participation> findParticipants(Run run){
-       return participationRepository.findByRun(run);
+    public List<Participation> findParticipants(){
+        return participationRepository.findAll();
     }
 
 

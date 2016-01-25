@@ -4,18 +4,23 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+		jcenter()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 		classpath("org.postgresql:postgresql:9.2-1004-jdbc4")
         classpath("org.freemarker:freemarker:2.3.14")
+		classpath "io.ratpack:ratpack-gradle:1.0.0"
 	}
 }
+
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'spring-boot' 
+apply plugin: 'spring-boot'
+apply plugin: "io.ratpack.ratpack-groovy"
+
 
 jar {
 	baseName = 'runner'
@@ -26,6 +31,7 @@ targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	jcenter()
 }
 
 
@@ -36,11 +42,14 @@ dependencies {
     compile("org.springframework.boot:spring-boot-actuator")
     compile("org.springframework.boot:spring-boot-loader")
     compile("org.springframework.boot:spring-boot-devtools")
+	runtime("org.slf4j:slf4j-simple:1.7.12")
+	compile("com.heroku.sdk:heroku-jdbc:0.1.1")
 	compile('org.postgresql:postgresql:9.2-1004-jdbc4')
     compile("org.freemarker:freemarker:2.3.14")
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
 
+mainClassName = "RunnerApplication"
 
 eclipse {
 	classpath {
@@ -52,3 +61,8 @@ eclipse {
 task wrapper(type: Wrapper) {
 	gradleVersion = '2.9'
 }
+
+task stage {
+	dependsOn installDist
+}
+

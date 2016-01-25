@@ -41,9 +41,11 @@ public class Runner implements Serializable {
 
     private String country;
 
-    private String phone;
+    private String shirt;
 
-    private Date birthdate;
+    private String club;
+
+    private int birthyear;
 
     private List<Participation> participation;
 
@@ -130,20 +132,20 @@ public class Runner implements Serializable {
         this.country = country;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getShirt() {
+        return shirt;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setShirt(String shirt) {
+        this.shirt = shirt;
     }
 
-    public Date getBirthdate() {
-        return birthdate;
+    public int getBirthyear() {
+        return birthyear;
     }
 
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
+    public void setBirthyear(int birthyear) {
+        this.birthyear = birthyear;
     }
 
     @OneToMany(mappedBy = "run", fetch = FetchType.EAGER)
@@ -153,5 +155,13 @@ public class Runner implements Serializable {
 
     public void setParticipation(List<Participation> participation) {
         this.participation = participation;
+    }
+
+    public String getClub() {
+        return club;
+    }
+
+    public void setClub(String club) {
+        this.club = club;
     }
 }

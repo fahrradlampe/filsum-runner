@@ -36,12 +36,8 @@ public class ParticipationController {
     public String registerView(Model model) {
         log.debug("participants list");
 
-        List<Run> runs = registerService.findActualRuns();
-        Run actualRun = runs.get(0);
-        model.addAttribute("runs", runs);
-        model.addAttribute("actualRunId", actualRun.getRunId());
 
-        List<Participation> particpiants = participationService.findParticipants(actualRun);
+        List<Participation> particpiants = participationService.findParticipants();
         model.addAttribute("participants", particpiants);
 
         return "startlist";

@@ -26,6 +26,8 @@
 <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
 <script type="text/javascript" src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="/js/jquery.tablesorter.widgets.min.js"></script>
 <script type="text/javascript" src="/js/filsumrunner.js"></script>
 
 </body>

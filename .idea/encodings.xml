@@ -8,8 +8,6 @@
     <file url="file://$PROJECT_DIR$/src/main/resources/templates/error.ftl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/templates/images.ftl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/templates/index.ftl" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/templates/layout/header.ftl" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/templates/layout/home.ftl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/templates/map.ftl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/templates/startlist.ftl" charset="UTF-8" />
   </component>

@@ -10,31 +10,6 @@
         <div class="panel panel-default">
             <div class="panel-body">
 
-        <div class="form-group">
-
-
-
-            <div class="col-sm-10">
-                <ul id="runs" class="nav nav-pills registration">
-                    <#list runs as run>
-                        <#if run.runId == actualRunId>
-                            <li class="active">
-                                <a href="#" data-toggle="tab">
-                                ${run.name}
-                                </a>
-                            </li>
-                        <#else>
-                            <li class="">
-                                <a href="#" data-toggle="tab">
-                                ${run.name}
-                                </a>
-                            </li>
-                        </#if>
-                    </#list>
-                </ul>
-            </div>
-
-        </div>
 
     <div class="row">
     <div class="col-lg-12">
@@ -47,15 +22,16 @@
             <th width="8%">Verein</th>
             <th width="5%">Geschlecht</th>
             <th width="8%">Jahrgang</th>
-
+            <th width="8%">Strecke</th>
         </thead>
     <tbody>
         <#list participants as participant>
         <tr>
+            <td>${participant.runner.forename}</td>
             <td>${participant.runner.surname}</td>
-            <td>${participant.runner.forename}</td>
-            <td>${participant.runner.forename}</td>
+            <td>${participant.runner.club}</td>
             <td>${participant.runner.gender}</td>
+            <td>${participant.runner.birthyear?c}</td>
             <td>${participant.run.name}</td>
 
 
