@@ -37,3 +37,8 @@
 .navbar .navbar-collapse {
     text-align: center;
 }
+.boxline{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

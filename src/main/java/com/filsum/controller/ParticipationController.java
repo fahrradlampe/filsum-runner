@@ -2,7 +2,6 @@ package com.filsum.controller;
 
 import com.filsum.model.Participation;
 import com.filsum.model.Run;
-import com.filsum.model.Runner;
 import com.filsum.service.ParticipationService;
 import com.filsum.service.RegisterService;
 import org.slf4j.Logger;
@@ -10,9 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
@@ -33,7 +30,7 @@ public class ParticipationController {
     private RegisterService registerService;
 
     @RequestMapping(value = "/participantslist")
-    public String registerView(Model model) {
+    public String participantView(Model model) {
         log.debug("participants list");
 
 
@@ -41,5 +38,16 @@ public class ParticipationController {
         model.addAttribute("participants", particpiants);
 
         return "startlist";
+    }
+
+    @RequestMapping(value = "/results")
+    public String resultsView(Model model) {
+        log.debug("participants list");
+
+
+        List<Participation> particpiants = participationService.findParticipants();
+        model.addAttribute("participants", particpiants);
+
+        return "results";
     }
 }

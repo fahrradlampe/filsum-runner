@@ -17,14 +17,14 @@
         <!-- Alle Navigationslinks, Formulare und anderer Inhalt werden hier zusammengefasst und können dann ein- und ausgeblendet werden -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class=""><a href="/index">Home</a></li>
-                <li class=""><a href="/register">Anmeldung</a></li>
-                <li class=""><a href="/participantslist">Teilnehmerliste</a></li>
-                <li class=""><a href="/register">Sponsoren</a></li>
-                <li class=""><a href="/map">Anfahrt</a></li>
-                <li class=""><a href="/register">Ergebnisse</a></li>
-                <li class=""><a href="/images">Bilder</a></li>
-                <li class=""><a href="/register">Kontakt</a></li>
+                <li class="index"><a href="/index">Home</a></li>
+                <li class="register"><a href="/register">Anmeldung</a></li>
+                <li class="participantslist"><a href="/participantslist">Teilnehmerliste</a></li>
+                <li class="sponsor"><a href="/sponsor">Sponsoren</a></li>
+                <li class="map"><a href="/map">Anfahrt</a></li>
+                <li class="results"><a href="/results">Ergebnisse</a></li>
+                <li class="images"><a href="/images">Bilder</a></li>
+                <li class="contact"><a href="/contact">Kontakt</a></li>
 
             </ul>
 

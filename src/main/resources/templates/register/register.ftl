@@ -25,6 +25,9 @@
 
                     <div class="form-group">
 
+                        <h3 class="col-sm-12 col-sm-offset-2">Anmeldung</h3>
+
+
                         <label class="control-label col-sm-2" for="runs">Strecke*:</label>
 
                         <div class="col-sm-10">

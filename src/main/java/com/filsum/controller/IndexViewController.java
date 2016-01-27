@@ -22,6 +22,10 @@ public class IndexViewController {
         return "index";
     }
 
+    @RequestMapping(path = "/")
+    public String viewStart() {
+        return "index";
+    }
 
     @RequestMapping(path = "/map")
     public String viewMap() {
@@ -32,6 +36,22 @@ public class IndexViewController {
     public String viewImages() {
         return "images";
     }
+
+    @RequestMapping(path = "/impressum")
+    public String viewImpressum() {
+        return "impressum";
+    }
+
+    @RequestMapping(path = "/contact")
+    public String viewContact() {
+        return "contact";
+    }
+
+    @RequestMapping(path = "/sponsor")
+    public String viewSponsor() {
+        return "sponsor";
+    }
+
 
     @InitBinder
     public void dataBinding(WebDataBinder binder) {

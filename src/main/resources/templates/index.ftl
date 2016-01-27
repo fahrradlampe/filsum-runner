@@ -10,10 +10,10 @@
 
         <div class="jumbotron">
             <div class="container">
-                <img src="../../images/sv-blau-weiss-filsum.gif">
+                <img src="../../images/logo_filsum_loept.png">
                 <h1>Filsum Löpt</h1>
                 <p>24.Juni 2016</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Anmelden</a></p>
+                <p><a class="btn btn-primary btn-lg" href="/register" role="button">Anmelden</a></p>
             </div>
         </div>
 

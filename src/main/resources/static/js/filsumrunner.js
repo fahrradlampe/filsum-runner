@@ -31,7 +31,16 @@ $(document).ready(function()
 
             }
         });
+
+        // activate elements in main-nav
+        var url = window.location.pathname.toLowerCase();
+        var elements = url.split("/");
+        var className = elements[1];
+        if($('.' + className).length > 0){
+            $('.' + className).addClass('active');
+        }
     }
+
 );
 
 $(function () {
@@ -42,4 +51,5 @@ $(function () {
         var runId = e.target.getAttribute("data-runid");
         $('#selectedRun').val(runId);
     });
+
 });

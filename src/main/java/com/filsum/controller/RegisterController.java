@@ -1,6 +1,5 @@
 package com.filsum.controller;
 
-import com.filsum.model.Participation;
 import com.filsum.model.Run;
 import com.filsum.model.Runner;
 import com.filsum.model.RunnerFormData;

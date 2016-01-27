@@ -17,7 +17,8 @@
 
 <div id="footer">
     <div class="container">
-        <p class="text-muted">Currently 0.0.1, 18.01.2016</p>
+        <p class="text-muted">Currently 0.0.1, 18.01.2016    <a href="impressum">Impressum</a></p>
+
     </div>
 
 </div>
