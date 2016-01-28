@@ -23,7 +23,7 @@
                 <li class="sponsor"><a href="/sponsor">Sponsoren</a></li>
                 <li class="map"><a href="/map">Anfahrt</a></li>
                 <li class="results"><a href="/results">Ergebnisse</a></li>
-                <li class="images"><a href="/images">Bilder</a></li>
+                <li class="images"><a id="imagesLink" href="/images">Bilder</a></li>
                 <li class="contact"><a href="/contact">Kontakt</a></li>
 
             </ul>

@@ -17,7 +17,7 @@
                     Tel.: +49 (0)1753550770<br/>
                     <br/>
                     Filsum<br/>
-                    E-Mail: <a href="mailto:service@tchibo.de">filsumloept@gmail.com</a><br/>
+                    E-Mail: <a href="mailto:filsumloept@gmail.com">filsumloept@gmail.com</a><br/>
                 </p>
 
 

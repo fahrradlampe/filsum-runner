@@ -12,18 +12,21 @@
 
                 <h3 class="col-sm-14 col-sm-offset-0">Ergebnisse</h3>
 
-                <div class="row">
-                    <div class="col-lg-12">
+
+                    <div class="row col-lg-12">
+                    <div class="table-responsive">
                         <table id="particpantTable"
-                               class="table table-striped table-hover tablesorter table-responsive table-condensed">
+                               class="table table-striped table-hover tablesorter  table-condensed">
                             <thead>
                             <tr>
-                                <th width="20%">Vorname</th>
-                                <th width="20%">Nachname</th>
-                                <th width="8%">Verein</th>
-                                <th width="5%">Geschlecht</th>
-                                <th width="8%">Jahrgang</th>
-                                <th width="8%">Strecke</th>
+                                <th  class="col-sm-2">Vorname</th>
+                                <th  class="col-sm-2">Nachname</th>
+                                <th  class="col-sm-2">Verein</th>
+                                <th  class="col-sm-1">Geschlecht</th>
+                                <th  class="col-sm-1">Jahrgang</th>
+                                <th  class="col-sm-1">Strecke</th>
+                                <th  class="col-sm-2">Zeit</th>
+                                <th  class="col-sm-1"></th>
                             </thead>
                             <tbody>
                                 <#list participants as participant>
@@ -34,14 +37,15 @@
                                     <td>${participant.runner.gender}</td>
                                     <td>${participant.runner.birthyear?c}</td>
                                     <td>${participant.run.name}</td>
-
-
+                                    <td>${participant.time!""}</td>
+                                    <td><a class="btn btn-primary" href="https://www.dropbox.com/s/s8omlepthw2un9k/Urkunde-KlfK_2015.pdf?dl=0" role="button">Urkunde</a></td>
                                 </tr>
                                 </#list>
                             </tbody>
                         </table>
                     </div>
-                </div>
+                    </div>
+
 
             </div>
         </div>

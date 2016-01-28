@@ -15,9 +15,8 @@ import java.util.List;
 @Controller
 public class ParticipationController {
 
-    private static final String REGISTER = "register";
-
-    private final Logger log = LoggerFactory.getLogger(ParticipationController.class);
+    // TODO loggable
+    private static final Logger LOG = LoggerFactory.getLogger(ParticipationController.class);
 
     @Autowired
     private ParticipationService participationService;
@@ -27,8 +26,7 @@ public class ParticipationController {
 
     @RequestMapping(value = "/participantslist")
     public String participantView(Model model) {
-        log.debug("participants list");
-
+        LOG.debug("participants list");
 
         List<Participation> particpiants = participationService.findParticipants();
         model.addAttribute("participants", particpiants);
@@ -38,8 +36,7 @@ public class ParticipationController {
 
     @RequestMapping(value = "/results")
     public String resultsView(Model model) {
-        log.debug("participants list");
-
+        LOG.debug("participants list");
 
         List<Participation> particpiants = participationService.findParticipants();
         model.addAttribute("participants", particpiants);
