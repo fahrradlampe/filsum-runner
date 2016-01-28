@@ -21,10 +21,12 @@
     color: #1D1B1B;
 }
 .main{
-    background-image: url('../images/marathon.jpg');
-    height: 989px;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(../images/laeufer_hintergrund.jpg) no-repeat  center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 850px;
 }
 .panel{
     opacity: 0.9;
@@ -52,4 +54,16 @@
     text-align: center;
     cursor: pointer;
     background-color: #e6bf99;
+}
+.tablesorter {
+    width: auto;
+}
+.tablesorter .tablesorter-filter {
+    width: 100%;
+}
+.jumbotron {
+    background-color: rgba(238, 238, 238, 0.9);
+}
+.navbar-nav {
+    margin-top: 4px;
 }

@@ -8,20 +8,22 @@
 <div class="container">
 
 
-    <#if formError??>
-        <div class="alert alert-danger">
-        ${formError}
-        </div>
-    </#if>
-
     <div class="col-lg-10 col-lg-offset-1">
         <form name="runnerData" class="form-horizontal" action="/register/add" role="form"
               method="post">
 
-            <@spring.bind path="runnerData" />
-
             <div class="panel panel-default">
                 <div class="panel-body">
+
+
+                    <@spring.bind path="runnerData.selectedRun" />
+                    <#list spring.status.errorMessages as error>
+                        <div class="alert alert-danger">
+                        ${error}
+                        </div>
+                    </#list>
+
+                    <@spring.bind "runnerData" />
 
                     <div class="form-group">
 
@@ -118,7 +120,7 @@
                         <label class="control-label col-sm-2" for="ZipCode">Postleitzahl:</label>
 
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Eingabe Postleitzahl" required>
+                            <input type="text" class="form-control" name="${spring.status.expression}" id="${spring.status.expression}" placeholder="Eingabe Postleitzahl" >
                         </div>
                     </div>
 
@@ -185,7 +187,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default">Verbindlich Anmelden</button>
+                            <button type="submit" class="btn btn-primary">Verbindlich Anmelden</button>
                         </div>
                     </div>
 

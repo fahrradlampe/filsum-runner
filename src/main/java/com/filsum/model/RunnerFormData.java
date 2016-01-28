@@ -1,5 +1,7 @@
 package com.filsum.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 /**
  * Created by Katrin on 25.01.2016.
  */
@@ -7,7 +9,8 @@ public class RunnerFormData {
 
     private Runner runner;
 
-    private long selectedRun;
+    @NotEmpty(message = "Bitte wähle eine Strecke aus")
+    private Long selectedRun;
 
     public RunnerFormData() {
         runner = new Runner();
@@ -21,11 +24,11 @@ public class RunnerFormData {
         this.runner = runner;
     }
 
-    public long getSelectedRun() {
+    public Long getSelectedRun() {
         return selectedRun;
     }
 
-    public void setSelectedRun(long selectedRun) {
+    public void setSelectedRun(Long selectedRun) {
         this.selectedRun = selectedRun;
     }
 }
