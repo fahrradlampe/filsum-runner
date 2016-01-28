@@ -38,7 +38,7 @@
                                     <td>${participant.runner.birthyear?c}</td>
                                     <td>${participant.run.name}</td>
                                     <td>${participant.time!""}</td>
-                                    <td><a class="btn btn-primary" href="/certificate" role="button">Urkunde</a></td>
+                                    <td><a class="btn btn-primary" href="https://www.dropbox.com/s/s8omlepthw2un9k/Urkunde-KlfK_2015.pdf?dl=0" role="button">Urkunde</a></td>
                                 </tr>
                                 </#list>
                             </tbody>
