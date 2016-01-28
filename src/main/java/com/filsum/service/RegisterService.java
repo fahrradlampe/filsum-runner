@@ -30,14 +30,7 @@ public class RegisterService {
     @Autowired
     private ParticipationRepository participationRepository;
 
-    /**
-     * creates a new runner, if the email does not exist
-     * @param runnerData
-     * @return
-     */
     public Participation createParticipation(RunnerFormData runnerData){
-
-        //runnerRepository.findByEmail(runner.getEmail());
         Runner runner = runnerRepository.save(runnerData.getRunner());
         Run run = runRepository.findOne(runnerData.getSelectedRun());
         Participation participation = new Participation();

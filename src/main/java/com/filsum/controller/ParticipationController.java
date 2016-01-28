@@ -1,7 +1,6 @@
 package com.filsum.controller;
 
 import com.filsum.model.Participation;
-import com.filsum.model.Run;
 import com.filsum.service.ParticipationService;
 import com.filsum.service.RegisterService;
 import org.slf4j.Logger;
@@ -13,9 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-/**
- * @author Katrin Mischok
- */
 @Controller
 public class ParticipationController {
 

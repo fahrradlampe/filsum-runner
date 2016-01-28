@@ -1,8 +1,5 @@
 package com.filsum.model;
 
-/**
- * Created by Katrin on 25.01.2016.
- */
 public class RunnerFormData {
 
     private Runner runner;

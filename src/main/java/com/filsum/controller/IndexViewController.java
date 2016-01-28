@@ -9,11 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- *
- *
- * @author Dirk Dittmar / Monday Consulting GmbH
- */
 @Controller
 public class IndexViewController {
 
