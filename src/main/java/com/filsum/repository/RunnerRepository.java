@@ -7,12 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * @author Katrin Mischok
- */
 @Repository
 public interface RunnerRepository extends JpaRepository<Runner, Long> {
 
     List<Runner> findByEmail(String email);
-
 }

@@ -7,9 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * @author Katrin Mischok
- */
 @Repository
 public interface ParticipationRepository extends JpaRepository<Participation, Long> {
 

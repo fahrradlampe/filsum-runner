@@ -9,11 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- *
- *
- * @author Dirk Dittmar / Monday Consulting GmbH
- */
 @Controller
 public class IndexViewController {
 
@@ -52,10 +47,8 @@ public class IndexViewController {
         return "sponsor";
     }
 
-
     @InitBinder
     public void dataBinding(WebDataBinder binder) {
-        //binder.addValidators(userValidator, emailValidator);
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));
