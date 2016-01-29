@@ -13,7 +13,6 @@ import java.util.List;
 @Table(name = "runner")
 public class Runner implements Serializable {
 
-
     // id
     private Long runnerId;
 

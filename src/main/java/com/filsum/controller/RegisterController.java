@@ -3,8 +3,7 @@ package com.filsum.controller;
 import com.filsum.model.Run;
 import com.filsum.model.RunnerFormData;
 import com.filsum.service.RegisterService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.jcabi.log.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,14 +18,12 @@ import java.util.List;
 @Controller
 public class RegisterController {
 
-    private static final Logger LOG = LoggerFactory.getLogger(RegisterController.class);
-
     @Autowired
     private RegisterService registerService;
 
     @RequestMapping(value = "/register")
     public String registerView(Model model) {
-        LOG.debug("register runner view");
+        Logger.debug(this, "register runner view");
         model.addAttribute("runnerData", new RunnerFormData());
 
         List<Run> runs = registerService.findActualRuns();
@@ -36,7 +33,7 @@ public class RegisterController {
 
     @RequestMapping(value = "/register/add", method = RequestMethod.POST)
     public String registerAdd(Model model, @ModelAttribute("runnerData") @Valid RunnerFormData runnerData, BindingResult bindingResult) {
-        LOG.debug("add new runner");
+        Logger.debug(this, "add new runner");
 
         if (bindingResult.hasErrors()) {
             List<Run> runs = registerService.findActualRuns();
@@ -46,5 +43,9 @@ public class RegisterController {
 
         registerService.createParticipation(runnerData);
         return "register/registerSuccess";
+    }
+
+    protected void setRegisterService(RegisterService registerService) {
+        this.registerService = registerService;
     }
 }
