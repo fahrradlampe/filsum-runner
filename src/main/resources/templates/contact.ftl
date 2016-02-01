@@ -14,7 +14,6 @@
 
                 <p class="p--standard">
                     Holger Wollenberg<br/>
-                    Tel.: +49 (0)1753550770<br/>
                     <br/>
                     Filsum<br/>
                     E-Mail: <a href="mailto:filsumloept@gmail.com">filsumloept@gmail.com</a><br/>

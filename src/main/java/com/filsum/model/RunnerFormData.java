@@ -7,7 +7,7 @@ public class RunnerFormData {
     private Runner runner;
 
     @NotEmpty(message = "Bitte wähle eine Strecke aus")
-    private Long selectedRun;
+    private long selectedRun;
 
     public RunnerFormData() {
         runner = new Runner();
@@ -21,11 +21,11 @@ public class RunnerFormData {
         this.runner = runner;
     }
 
-    public Long getSelectedRun() {
+    public long getSelectedRun() {
         return selectedRun;
     }
 
-    public void setSelectedRun(Long selectedRun) {
+    public void setSelectedRun(long selectedRun) {
         this.selectedRun = selectedRun;
     }
 }

@@ -29,7 +29,7 @@
     min-height: 850px;
 }
 .panel{
-    opacity: 0.9;
+    background-color: rgba(255,255,255,0.9);
 }
 .navbar .navbar-nav {
     display: inline-block;
@@ -66,4 +66,30 @@
 }
 .navbar-nav {
     margin-top: 4px;
+}
+/* Footerbereich*/
+#footer {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    display: table-row;
+}
+.footer-navi {
+    padding: 4px 0px;
+    text-align: center;
+}
+.footer-navi ul {
+    display: inline-block;
+}
+.footer-navi ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.footer-navi ul li.first {
+    margin-right: 28px;
+}
+
+.footer-navi ul li a {
+    font-size: 0.8em;
 }

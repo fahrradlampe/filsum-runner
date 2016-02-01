@@ -17,13 +17,17 @@
 
     <#nested/>
 
-
+<div class="container">
 <div id="footer">
-    <div class="container">
-        <p class="text-muted">Currently 0.0.1, 18.01.2016    <a href="impressum">Impressum</a></p>
-
+    <div class="footer-navi">
+        <ul>
+            <li class="first">Currently 0.0.1, 18.01.2016 </li>
+            <li class="first"><a href="/impressum">Impressum</a></li>
+            <li class="last"><a href="/dataprivacy">Datenschutzerklärung</li>
+        </ul>
     </div>
 
+</div>
 </div>
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

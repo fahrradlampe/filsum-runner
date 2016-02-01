@@ -37,6 +37,11 @@ public class IndexViewController {
         return "impressum";
     }
 
+    @RequestMapping(path = "/dataprivacy")
+    public String viewIDataprivacy() {
+        return "dataprivacy";
+    }
+
     @RequestMapping(path = "/contact")
     public String viewContact() {
         return "contact";

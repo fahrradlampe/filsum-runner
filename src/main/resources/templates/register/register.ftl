@@ -51,12 +51,14 @@
                     </div>
 
                     <div class="form-group">
+                        <@spring.bind path="runnerData.runner.gender" />
+
                         <div class="col-lg-8 col-md-offset-2">
                             <label class="radio-inline">
-                                <input class="radio-row" name="gender" type="radio" id="female" value="w" checked> weiblich
+                                <input class="radio-row" name="gender" type="radio" id="${spring.status.expression}" value="w" checked> weiblich
                             </label>
                             <label class="radio-inline">
-                                <input class="radio-row" name="gender" type="radio" id="male" value="m"> männlich
+                                <input class="radio-row" name="gender" type="radio" id="${spring.status.expression}" value="m"> männlich
                             </label>
                         </div>
                     </div>

@@ -24,7 +24,7 @@ public class Runner implements Serializable {
     private String surname;
 
     // gender of the person
-    private char gender = 'w';
+    private String gender = "w";
 
     // e-mail
     private String email;
@@ -73,11 +73,11 @@ public class Runner implements Serializable {
         this.surname = surname;
     }
 
-    public char getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(char gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
