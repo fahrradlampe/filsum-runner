@@ -26,17 +26,19 @@ public class RegisterController {
         Logger.debug(this, "register runner view");
         model.addAttribute("runnerData", new RunnerFormData());
 
-        List<Run> runs = registerService.findActualRuns();
+        List<Run> runs = registerService.findRunsToRegister();
         model.addAttribute("runs", runs);
         return "register/register";
     }
 
     @RequestMapping(value = "/register/add", method = RequestMethod.POST)
-    public String registerAdd(Model model, @ModelAttribute("runnerData") @Valid RunnerFormData runnerData, BindingResult bindingResult) {
+    public String registerAdd(Model model, @ModelAttribute("runnerData") @Valid RunnerFormData runnerData, BindingResult bindingResult)
+
+            throws Exception {
         Logger.debug(this, "add new runner");
 
         if (bindingResult.hasErrors()) {
-            List<Run> runs = registerService.findActualRuns();
+            List<Run> runs = registerService.findRunsToRegister();
             model.addAttribute("runs", runs);
             return "register/register";
         }

@@ -34,7 +34,7 @@ public class RegisterControllerTest {
 
         verify(model).addAttribute(eq("runnerData"), any(RunnerFormData.class));
         List<Run> runs = new ArrayList<>();
-        when(registerService.findActualRuns()).thenReturn(runs);
+        when(registerService.findRunsToRegister()).thenReturn(runs);
         verify(model).addAttribute("runs", runs);
     }
 }

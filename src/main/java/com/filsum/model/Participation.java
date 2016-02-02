@@ -14,6 +14,8 @@ public class Participation implements Serializable {
 
     private Long time;
 
+    private boolean paid = false;
+
     private Run run;
 
     private Runner runner;
@@ -52,5 +54,13 @@ public class Participation implements Serializable {
 
     public void setRunner(Runner runner) {
         this.runner = runner;
+    }
+
+    public boolean isPaid() {
+        return paid;
+    }
+
+    public void setPaid(boolean paid) {
+        this.paid = paid;
     }
 }

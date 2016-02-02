@@ -1,12 +1,15 @@
 package com.filsum.service;
 
 import com.filsum.model.Participation;
+import com.filsum.model.Run;
 import com.filsum.repository.ParticipationRepository;
 import com.filsum.repository.RunRepository;
 import com.filsum.repository.RunnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.List;
 
 @Service
@@ -23,5 +26,21 @@ public class ParticipationService {
 
     public List<Participation> findParticipants(){
         return participationRepository.findAll();
+    }
+
+    /**
+     *
+     * @param year actual year
+     * @return
+     */
+    public List<Participation> findActualPaidParticipants(int year){
+
+        // first day of the actual year
+        LocalDate firstDay = LocalDate.of(year, Month.JANUARY, 1);
+        // last day of the actual year
+        LocalDate lastDay = LocalDate.of(year, Month.DECEMBER, 31);
+
+        List<Run> runsOfYear = runRepository.findByStartDateBetween(firstDay, lastDay);
+        return participationRepository.findByRunInAndPaid(runsOfYear, true);
     }
 }

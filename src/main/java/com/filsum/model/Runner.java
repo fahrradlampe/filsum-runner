@@ -23,7 +23,7 @@ public class Runner implements Serializable {
     private String surname;
 
     // gender of the person
-    private String gender = "w";
+    private String gender;
 
     // e-mail
     private String email;

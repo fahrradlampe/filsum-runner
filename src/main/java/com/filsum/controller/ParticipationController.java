@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Controller
@@ -20,11 +21,17 @@ public class ParticipationController {
     @Autowired
     private RegisterService registerService;
 
+    /**
+     * shows the paid participants of runs of the actual year
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/participantslist")
     public String participantView(Model model) {
         Logger.debug(this, "participants list");
 
-        List<Participation> particpiants = participationService.findParticipants();
+        LocalDate actualDate = LocalDate.now();
+        List<Participation> particpiants = participationService.findActualPaidParticipants(actualDate.getYear());
         model.addAttribute("participants", particpiants);
 
         return "startlist";

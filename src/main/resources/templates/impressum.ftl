@@ -22,7 +22,7 @@
                     <td>Telefon:</td>
                     <td></td></tr>
                     <tr><td>E-Mail:</td>
-                        <td>filsumloept@gmail.com</td>
+                        <td>filsumloeppt@gmail.com</td>
                     </tr></table>
                 <h2>Quellenangaben für die verwendeten Bilder und Grafiken:</h2>
                 <p>123RF Lizenzfreie Bilder<br />

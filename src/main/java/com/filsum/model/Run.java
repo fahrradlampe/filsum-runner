@@ -5,6 +5,7 @@ import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -20,11 +21,11 @@ public class Run implements Serializable {
 
     private Long distance;
 
-    private Date startDate;
+    private LocalDate startDate;
 
     private BigDecimal charge;
 
-    private Date participationDeadline;
+    private LocalDate participationDeadline;
 
     private List<Participation> participation;
 
@@ -54,11 +55,11 @@ public class Run implements Serializable {
         this.distance = distance;
     }
 
-    public Date getStartDate() {
+    public LocalDate  getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(LocalDate  startDate) {
         this.startDate = startDate;
     }
 
@@ -71,11 +72,11 @@ public class Run implements Serializable {
         this.participation = participation;
     }
 
-    public Date getParticipationDeadline() {
+    public LocalDate getParticipationDeadline() {
         return participationDeadline;
     }
 
-    public void setParticipationDeadline(Date participationDeadline) {
+    public void setParticipationDeadline(LocalDate participationDeadline) {
         this.participationDeadline = participationDeadline;
     }
 

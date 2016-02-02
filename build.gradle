@@ -37,6 +37,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-actuator")
     compile("org.springframework.boot:spring-boot-loader")
     compile("org.springframework.boot:spring-boot-devtools")
+    compile("org.springframework.boot:spring-boot-starter-mail")
 	compile('org.postgresql:postgresql:9.2-1004-jdbc4')
     compile("org.freemarker:freemarker:2.3.14")
     testCompile('org.mockito:mockito-core:2.0.41-beta')

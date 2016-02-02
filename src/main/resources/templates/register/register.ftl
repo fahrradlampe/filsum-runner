@@ -55,12 +55,14 @@
 
                         <div class="col-lg-8 col-md-offset-2">
                             <label class="radio-inline">
-                                <input class="radio-row" name="gender" type="radio" id="${spring.status.expression}" value="w" checked> weiblich
+                                <input class="radio-row" type="radio" name="${spring.status.expression}" value="w" checked/> weiblich
+
                             </label>
                             <label class="radio-inline">
-                                <input class="radio-row" name="gender" type="radio" id="${spring.status.expression}" value="m"> männlich
+                                <input class="radio-row" name="${spring.status.expression}" type="radio"  value="m"> männlich
                             </label>
                         </div>
+
                     </div>
 
                     <div class="form-group">
@@ -90,7 +92,7 @@
                         <label class="control-label col-sm-2" for="birthyear">Geburtsjahr*:</label>
 
                         <div class="col-sm-10">
-                            <input type="number" class="form-control"name="${spring.status.expression}" id="${spring.status.expression}" value="1984" min="1900" max="2020"  required>
+                            <input type="text" class="form-control"name="${spring.status.expression}" id="${spring.status.expression}" placeholder="1984" min="1900" max="2020"  required>
 
                         </div>
                     </div>
@@ -177,11 +179,13 @@
                         <label class="control-label col-sm-2" for="inputCheck"></label>
                         <div class="col-sm-10">
 
-                            <input name="" id="inputCheck" type="checkbox" required>
+                            <input name="" id="inputCheck" type="checkbox" required/>
 
-                            Haftungsausschluss des Veranstalters für Schäden jeglicher Art an. Er bestätigt, gesund und in einem ausreichenden Trainingszustand zu sein.
+                            <label for="inputCheck"> Haftungsausschluss des Veranstalters für Schäden jeglicher Art an. Er bestätigt, gesund und in einem ausreichenden Trainingszustand zu sein.
                             Hinweis das Teilnehmer in Kürze ne Email erhält mit einer Zahlungsaufforderung
                             Hinweis, dass erst nach Eingang der Zahlung ein Erscheinen in der Teilnehmerliste erfolgt und Anmeldung dann abgeschlossen ist.
+                            </label>
+
 
                         </div>
                     </div>

@@ -10,7 +10,7 @@ import com.filsum.repository.RunnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -25,17 +25,23 @@ public class RegisterService {
     @Autowired
     private ParticipationRepository participationRepository;
 
-    public Participation createParticipation(RunnerFormData runnerData){
+    @Autowired
+    private MailService mailService;
+
+    public Participation createParticipation(RunnerFormData runnerData) throws Exception {
         Runner runner = runnerRepository.save(runnerData.getRunner());
         Run run = runRepository.findOne(runnerData.getSelectedRun());
         Participation participation = new Participation();
         participation.setRun(run);
         participation.setRunner(runner);
         participationRepository.save(participation);
+
+        //mailService.sendParticpation(participation);
+
         return participation;
     }
 
-    public List<Run> findActualRuns(){
-        return runRepository.findByparticipationDeadlineAfter(new Date());
+    public List<Run> findRunsToRegister(){
+        return runRepository.findByparticipationDeadlineAfter(LocalDate.now());
     }
 }
