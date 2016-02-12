@@ -9,8 +9,19 @@
 
         <div class="panel panel-default">
             <div class="panel-body">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76387.37525443414!2d7.571609626207412!3d53.25180972741684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b65694f151d8e5%3A0x426cf7763009920!2sFilsum!5e0!3m2!1sen!2sde!4v1453470606509" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
+                <div class="row">
+                    <div class="col-md-7">
+                        <iframe src="https://www.google.com/maps/d/embed?mid=zxdSeBnwgT94.ktKGkeC2PZ-E" width="640"
+                                height="480"></iframe>
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Anfahrt</h3>
+                        Gelaufen wird ein 5 Kilometer Rundkurs, der beim 10 Kilometerlauf zweimal zu durchlaufen ist. Start und Ziel
+                        befindet sich auf dem Filsumer Sportplatz.<br/>
+                        Für Navigationsgeräte geben Sie bitte folgende Adresse ein:
+                        Osterende 21, 26849 Filsum
+                    </div>
+                </div>
             </div>
         </div>
     </div>
