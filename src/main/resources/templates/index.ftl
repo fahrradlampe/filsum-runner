@@ -14,7 +14,7 @@
                 <!--div class="panel panel-default">
                     <div class="panel-body"-->
 
-                <img src="../../images/logo_filsum.gif">
+                <img src="../../images/logo_filsum_loeppt.gif">
 
                 <h3>24.Juni 2016</h3>
                 <p><a class="btn btn-primary btn-lg" href="/register" role="button">Anmelden</a></p>

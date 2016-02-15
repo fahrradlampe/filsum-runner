@@ -181,9 +181,9 @@
 
                             <input name="" id="inputCheck" type="checkbox" required/>
 
-                            <label for="inputCheck"> Haftungsausschluss des Veranstalters für Schäden jeglicher Art an. Er bestätigt, gesund und in einem ausreichenden Trainingszustand zu sein.
-                            Hinweis das Teilnehmer in Kürze ne Email erhält mit einer Zahlungsaufforderung
-                            Hinweis, dass erst nach Eingang der Zahlung ein Erscheinen in der Teilnehmerliste erfolgt und Anmeldung dann abgeschlossen ist.
+                            <label for="inputCheck"> Mit einer Anmeldung erkennt der Teilnehmer den Haftungsausschluss des Veranstalters für Schäden jeglicher Art an.
+                                Nach Anmeldung erhalten Sie eine Anmeldebestätigung per Email mit allen Meldedaten und einer Zahlungsaufforderung.
+                                Erst nach Zahlungseingang auf das dort genannte Konto erfolgt eine Aufnahme in die Teilnehmerliste.
                             </label>
 
 

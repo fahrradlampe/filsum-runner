@@ -21,7 +21,7 @@
     color: #1D1B1B;
 }
 .main{
-    background: url(../images/laeufer_hintergrund.jpg) no-repeat  center fixed;
+    background: url(../images/laeufer_hintergrund_klein.jpg) no-repeat  center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

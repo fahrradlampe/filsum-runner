@@ -16,10 +16,10 @@
                     </div>
                     <div class="col-md-5">
                         <h3>Anfahrt</h3>
-                        Gelaufen wird ein 5 Kilometer Rundkurs, der beim 10 Kilometerlauf zweimal zu durchlaufen ist. Start und Ziel
-                        befindet sich auf dem Filsumer Sportplatz.<br/>
-                        Für Navigationsgeräte geben Sie bitte folgende Adresse ein:
-                        Osterende 21, 26849 Filsum
+                        Gelaufen wird ein 5 Kilometer Rundkurs, der beim 10 Kilometerlauf zweimal zu durchlaufen ist. Start und Ziel befindet sich auf dem Filsumer Sportplatz.    <br/>
+                        Für Navigationsgeräte geben Sie bitte folgende Adresse ein:<br/> Osterende 21, 26849 Filsum     <br/>
+                        Zusätzlich zu den im Start- und Zielbereich vorhandenen Parkplätzen bestehen weitere Parkmöglichkeiten in 400m Entfernung beim Filsumer Rathaus im Rathausring 8, 26849 Filsum.
+
                     </div>
                 </div>
             </div>
