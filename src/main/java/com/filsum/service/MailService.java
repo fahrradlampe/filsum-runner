@@ -81,8 +81,12 @@ public class MailService {
         };
 
         Logger.trace(this, "sending mail...");
-
-        mailSender.send(preparator);
+        try {
+            mailSender.send(preparator);
+        } catch (Exception ex) {
+            Logger.error(this, "Error Mail: " + ex.getMessage());
+            ex.printStackTrace();
+        }
         Logger.trace(this, "sent mail.");
     }
 
