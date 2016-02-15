@@ -36,7 +36,7 @@ public class RegisterService {
         participation.setRunner(runner);
         participationRepository.save(participation);
 
-        //mailService.sendParticpation(participation);
+        mailService.sendParticpation(participation);
 
         return participation;
     }
