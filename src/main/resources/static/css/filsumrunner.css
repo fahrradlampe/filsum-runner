@@ -93,3 +93,18 @@
 .footer-navi ul li a {
     font-size: 0.8em;
 }
+.logo {
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-filsum {
+    width: 200px;
+    background-image: linear-gradient(to bottom, #4B77BE 0%, #265a88 100%);
+}
+.homecontainer {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
