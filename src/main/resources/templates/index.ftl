@@ -11,8 +11,6 @@
         <div class="jumbotron homecontainer">
             <div class="container">
 
-                <!--div class="panel panel-default">
-                    <div class="panel-body"-->
 
                 <img class="logo" src="../../images/logo_filsum_loeppt.gif">
 

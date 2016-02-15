@@ -10,7 +10,7 @@
         <div class="panel panel-default">
             <div class="panel-body">
 
-                <h3 class="col-sm-8 col-sm-offset-2">Ausschreibung 4.Filsum löppt</h3>
+                <h3 class="col-sm-8 col-sm-offset-2">Informationen 4.Filsum löppt</h3>
 
                 <div class="col-sm-3">Termin / Ausrichter:</div>
                 <div class="col-sm-7"> 24.06.2016, SV Blau-Weiss Filsum</div>
@@ -58,10 +58,9 @@
                 </div>
 
                 <div class="col-sm-3">Ergebnisliste:</div>
-                <div class="col-sm-7">Jeder Teilnehmer kann sich seine Urkunde unter www.bwfilsum.de ausdrucken. Ergebnisse werden
-                    im Internet unter <a href="http://www.bwfilsum.de">www.bwfilsum.de</a> veröffentlicht. Ergebnislisten und
-                    Urkunden werden nicht vor Ort ausgegeben
-                    und/oder nachgesendet.
+                <div class="col-sm-7">Die Platzierungen werden
+                    im Internet unter <a href="/results">Ergebnisse</a> veröffentlicht. Jeder Teilnehmer kann sich dort seine Urkunde ausdrucken. Ergebnislisten und
+                    Urkunden werden nicht vor Ort ausgegeben und/oder nachgesendet.
                 </div>
 
                 <div class="col-sm-3">Umkleide/ Duschen:</div>

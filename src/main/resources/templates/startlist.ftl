@@ -19,11 +19,11 @@
                             <thead>
                             <tr>
                                 <th width="20%">Vorname</th>
-                                <th width="20%">Nachname</th>
+                                <th data-placeholder="Tippe deinen Nachnamen ein..." width="20%">Nachname</th>
                                 <th width="8%">Verein</th>
-                                <th width="5%">Geschlecht</th>
+                                <th data-placeholder="Tippe m/w"width="5%">Geschlecht</th>
                                 <th width="8%">Jahrgang</th>
-                                <th width="8%">Strecke</th>
+                                <th data-placeholder="Tippe 10 km oder 5 km..." width="8%">Strecke</th>
                             </thead>
                             <tbody>
                                 <#list participants as participant>

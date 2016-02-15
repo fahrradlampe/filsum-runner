@@ -20,8 +20,8 @@
                             <thead>
                             <tr>
                                 <th  class="col-sm-2">Vorname</th>
-                                <th  class="col-sm-2">Nachname</th>
-                                <th  class="col-sm-2">Verein</th>
+                                <th data-placeholder="Tippe deinen Nachnamen ein..."  class="col-sm-2">Nachname</th>
+                                <th data-placeholder="Tippe deinen Verein ein..."  class="col-sm-2">Verein</th>
                                 <th  class="col-sm-1">Geschlecht</th>
                                 <th  class="col-sm-1">Jahrgang</th>
                                 <th  class="col-sm-1">Strecke</th>
