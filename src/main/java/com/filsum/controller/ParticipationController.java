@@ -41,7 +41,7 @@ public class ParticipationController {
     public String resultsView(Model model) {
         Logger.debug(this, "participants list");
 
-        List<Participation> particpiants = participationService.findParticipants();
+        List<Participation> particpiants = participationService.findParticipantsWithResults();
         model.addAttribute("participants", particpiants);
 
         return "results";

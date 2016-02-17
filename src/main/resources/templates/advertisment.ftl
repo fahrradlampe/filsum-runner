@@ -13,7 +13,7 @@
                 <h3 class="col-sm-8 col-sm-offset-2">Informationen 4.Filsum löppt</h3>
 
                 <div class="col-sm-3">Termin / Ausrichter:</div>
-                <div class="col-sm-7"> 24.06.2016, SV Blau-Weiss Filsum</div>
+                <div class="col-sm-7"> 24.06.2016, <a target="_blank" href="http://www.bwfilsum.de">SV Blau-Weiss Filsum</a></div>
 
                 <div class="col-sm-3">Meldungen:</div>
                 <div class="col-sm-7"><a href="/register">Onlineanmeldung hier</a></div>

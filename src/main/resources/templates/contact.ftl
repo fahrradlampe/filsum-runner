@@ -14,9 +14,9 @@
 
                 <p class="p--standard">
                     Holger Wollenberg<br/>
-                    <br/>
+                    Holger Schulte<br/>
                     Filsum<br/>
-                    E-Mail: <a href="mailto:filsumloept@gmail.com">filsumloept@gmail.com</a><br/>
+                    E-Mail: <a href="mailto:filsumloeppt@gmail.com">filsumloeppt@gmail.com</a><br/>
                 </p>
 
 

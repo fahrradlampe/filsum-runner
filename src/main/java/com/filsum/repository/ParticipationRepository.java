@@ -14,4 +14,6 @@ public interface ParticipationRepository extends JpaRepository<Participation, Lo
     List<Participation> findByRun(Run run);
 
     List<Participation> findByRunInAndPaid(Collection<Run> runs, boolean paid);
+
+    List<Participation> findByTimeIsNotNull();
 }

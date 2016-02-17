@@ -28,6 +28,10 @@ public class ParticipationService {
         return participationRepository.findAll();
     }
 
+    public List<Participation> findParticipantsWithResults(){
+        return participationRepository.findByTimeIsNotNull();
+    }
+
     /**
      *
      * @param year actual year

@@ -16,6 +16,10 @@
                 <div class="panel-body">
 
 
+                    <#if runs?size=0>
+                       <p>Aktuell sind keine Anmeldungen möglich.</p>
+                    <#else>
+
                     <@spring.bind path="runnerData.selectedRun" />
                     <#list spring.status.errorMessages as error>
                         <div class="alert alert-danger">
@@ -96,7 +100,6 @@
 
                         </div>
                     </div>
-
 
                     <div class="form-group">
                         <@spring.bind path="runnerData.runner.street" />
@@ -190,13 +193,13 @@
                         </div>
                     </div>
 
-
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" class="btn btn-primary btn-filsum">Verbindlich Anmelden</button>
                         </div>
                     </div>
 
+                    </#if>
                 </div>
             </div>
         </form>

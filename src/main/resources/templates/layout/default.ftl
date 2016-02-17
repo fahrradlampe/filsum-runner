@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Filsum Runner</title>
+    <title>Filsum Loeppt</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8" />
@@ -32,7 +32,7 @@
 <div id="footer">
     <div class="footer-navi">
         <ul>
-            <li class="first">Currently 0.0.1, 18.01.2016 </li>
+            <li class="first">Currently 0.8.0, 17.02.2016 </li>
             <li class="first"><a href="/impressum">Impressum</a></li>
             <li class="last"><a href="/dataprivacy">Datenschutzerklärung</li>
         </ul>
