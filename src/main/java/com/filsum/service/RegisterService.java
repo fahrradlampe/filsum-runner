@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.List;
 
 @Service
@@ -43,5 +44,14 @@ public class RegisterService {
 
     public List<Run> findRunsToRegister(){
         return runRepository.findByparticipationDeadlineAfter(LocalDate.now());
+    }
+
+    public List<Run> findRunsForResult(int year){
+        // first day of the actual year
+        LocalDate firstDay = LocalDate.of(year, Month.JANUARY, 1);
+        // last day of the actual year
+        LocalDate lastDay = LocalDate.of(year, Month.DECEMBER, 31);
+
+        return runRepository.findByStartDateBetween(firstDay, lastDay);
     }
 }

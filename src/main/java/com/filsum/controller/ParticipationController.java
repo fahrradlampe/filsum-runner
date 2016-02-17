@@ -1,12 +1,14 @@
 package com.filsum.controller;
 
 import com.filsum.model.Participation;
+import com.filsum.model.Run;
 import com.filsum.service.ParticipationService;
 import com.filsum.service.RegisterService;
 import com.jcabi.log.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.time.LocalDate;
@@ -39,10 +41,27 @@ public class ParticipationController {
 
     @RequestMapping(value = "/results")
     public String resultsView(Model model) {
-        Logger.debug(this, "participants list");
+        Logger.debug(this, "results list");
+        LocalDate actualDate = LocalDate.now();
+        List<Run> runs = registerService.findRunsForResult(actualDate.getYear());
 
-        List<Participation> particpiants = participationService.findParticipantsWithResults();
+        if(runs.size() > 0 ) {
+            return "redirect:results/" +runs.get(0).getRunId();
+        } else {
+            return "results";
+        }
+    }
+
+    @RequestMapping(value = "/results/{runId}")
+    public String resultsView(Model model, @PathVariable("runId") final Long runId) {
+        Logger.debug(this, "results list");
+
+        List<Participation> particpiants = participationService.findParticipantsWithResults(runId);
         model.addAttribute("participants", particpiants);
+
+        LocalDate actualDate = LocalDate.now();
+        List<Run> runs = registerService.findRunsForResult(actualDate.getYear());
+        model.addAttribute("runs", runs);
 
         return "results";
     }

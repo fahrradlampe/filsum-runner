@@ -12,6 +12,17 @@
 
                 <h3 class="col-sm-14 col-sm-offset-0">Ergebnisse</h3>
 
+                <ul name="runs" id="runs" class="nav nav-pills registration">
+                    <#list runs as run>
+                        <li class="runList" data-runid="${run.runId}" >
+                            <a id="actualResultRun" href="results/${run.runId}#run${run.runId}" data-runid="${run.runId}" data-toggle="tab">
+                            ${run.name}
+                            </a>
+                        </li>
+                    </#list>
+                </ul>
+                <br/>
+                <br/>
 
                     <div class="row col-lg-12">
                     <div class="table-responsive">
@@ -24,8 +35,8 @@
                                 <th data-placeholder="Tippe deinen Verein ein..."  class="col-sm-2">Verein</th>
                                 <th  class="col-sm-1">Geschlecht</th>
                                 <th  class="col-sm-1">Jahrgang</th>
-                                <th  class="col-sm-1">Strecke</th>
                                 <th  class="col-sm-2">Zeit</th>
+                                <th  class="col-sm-1">Platzierung</th>
                                 <th  class="col-sm-1"></th>
                             </thead>
                             <tbody>
@@ -36,9 +47,9 @@
                                     <td>${participant.runner.club}</td>
                                     <td>${participant.runner.gender}</td>
                                     <td>${participant.runner.birthyear?c}</td>
-                                    <td>${participant.run.name}</td>
                                     <td>${participant.time!""} Minuten</td>
-                                    <td><a class="btn btn-primary" href="https://www.dropbox.com/s/s8omlepthw2un9k/Urkunde-KlfK_2015.pdf?dl=0" role="button">Urkunde</a></td>
+                                    <td></td>
+                                    <td><a href="https://www.dropbox.com/s/s8omlepthw2un9k/Urkunde-KlfK_2015.pdf?dl=0">Urkunde</a></td>
                                 </tr>
                                 </#list>
                             </tbody>
@@ -49,5 +60,7 @@
 
             </div>
         </div>
+
+
 
 </@layout.default>

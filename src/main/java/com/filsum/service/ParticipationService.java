@@ -28,8 +28,14 @@ public class ParticipationService {
         return participationRepository.findAll();
     }
 
+
     public List<Participation> findParticipantsWithResults(){
         return participationRepository.findByTimeIsNotNull();
+    }
+
+    public List<Participation> findParticipantsWithResults(Long runId){
+        Run run = runRepository.findOne(runId);
+        return participationRepository.findByTimeIsNotNullAndRun(run);
     }
 
     /**

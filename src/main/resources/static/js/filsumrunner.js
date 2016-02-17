@@ -52,6 +52,12 @@ $(function () {
         $('#selectedRun').val(runId);
     });
 
+    // click run in result view
+    $(document).on("click", '#actualResultRun', function (e) {
+        var runId = e.target.getAttribute("data-runid");
+        window.location.href = "/results/" + runId;
+    });
+
 });
 
 function getPicturesFromFlickr() {
@@ -68,3 +74,12 @@ function getPicturesFromFlickr() {
     });
 
 }
+
+var href = window.location.href;
+var last = href.substring(href.lastIndexOf("/") + 1, href.length);
+$('.runList').each(function(i, obj) {
+    var runIdList = obj.getAttribute("data-runid");
+    if(runIdList == last){
+        $(obj).addClass("active");
+    }
+});
