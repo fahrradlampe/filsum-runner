@@ -23,4 +23,9 @@
     </div>
 </div>
 
+<script>
+    setInterval(function() {
+        window.location.reload();
+    }, 12000000);
+</script>
 </@layout.default>
