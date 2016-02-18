@@ -30,11 +30,13 @@ public class ParticipationController {
     @RequestMapping(value = "/participantslist")
     public String participantView(Model model) {
         Logger.debug(this, "participants list");
+        System.out.println("participants list start");
 
         LocalDate actualDate = LocalDate.now();
         List<Participation> particpiants = participationService.findActualPaidParticipants(actualDate.getYear());
         model.addAttribute("participants", particpiants);
 
+        System.out.println("participants list end");
         return "startlist";
     }
 
