@@ -58,7 +58,7 @@
                                         <td>${participant.runtime}</td>
                                         <td></td>
                                         <td>
-                                            <a href="https://www.dropbox.com/s/s8omlepthw2un9k/${participant.runner.forename}_${participant.runner.surname}.pdf">Urkunde</a>
+                                            <a href="https://www.dropbox.com/sh/8ckwnaxg2ayu0kz/AAAi7PHnKNkGX_ovWWrEzgg1a/${participant.runner.forename}_${participant.runner.surname}.pdf?dl=0">Urkunde</a>
                                         </td>
                                     </tr>
                                     </#list>

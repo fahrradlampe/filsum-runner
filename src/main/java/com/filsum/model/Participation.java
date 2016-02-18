@@ -16,7 +16,7 @@ public class Participation implements Serializable {
     // id
     private Long participationId;
 
-    private LocalTime runtime;
+    private String runtime;
 
     private boolean paid = false;
 
@@ -61,11 +61,11 @@ public class Participation implements Serializable {
         this.paid = paid;
     }
 
-    public LocalTime getRuntime() {
+    public String getRuntime() {
         return runtime;
     }
 
-    public void setRuntime(LocalTime runtime) {
+    public void setRuntime(String runtime) {
         this.runtime = runtime;
     }
 }
