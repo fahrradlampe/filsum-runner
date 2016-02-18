@@ -30,12 +30,12 @@ public class ParticipationService {
 
 
     public List<Participation> findParticipantsWithResults(){
-        return participationRepository.findByTimeIsNotNull();
+        return participationRepository.findByRuntimeIsNotNull();
     }
 
     public List<Participation> findParticipantsWithResults(Long runId){
         Run run = runRepository.findOne(runId);
-        return participationRepository.findByTimeIsNotNullAndRun(run);
+        return participationRepository.findByRuntimeIsNotNullAndRun(run);
     }
 
     /**

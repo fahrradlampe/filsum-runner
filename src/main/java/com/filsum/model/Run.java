@@ -25,6 +25,8 @@ public class Run implements Serializable {
 
     private BigDecimal charge;
 
+    private boolean showResult = true;
+
     private LocalDate participationDeadline;
 
     private List<Participation> participation;
@@ -86,5 +88,13 @@ public class Run implements Serializable {
 
     public void setCharge(BigDecimal charge) {
         this.charge = charge;
+    }
+
+    public boolean isShowResult() {
+        return showResult;
+    }
+
+    public void setShowResult(boolean showResult) {
+        this.showResult = showResult;
     }
 }

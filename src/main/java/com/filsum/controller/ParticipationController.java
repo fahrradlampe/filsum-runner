@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class ParticipationController {
@@ -25,8 +26,6 @@ public class ParticipationController {
 
     /**
      * shows the paid participants of runs of the actual year
-     * @param model
-     * @return
      */
     @RequestMapping(value = "/participantslist")
     public String participantView(Model model) {
@@ -40,13 +39,14 @@ public class ParticipationController {
     }
 
     @RequestMapping(value = "/results")
-    public String resultsView(Model model) {
+    public String resultsView() {
         Logger.debug(this, "results list");
         LocalDate actualDate = LocalDate.now();
         List<Run> runs = registerService.findRunsForResult(actualDate.getYear());
+        List<Run> runsForResult = runs.stream().filter(b -> b.isShowResult()).collect(Collectors.toList());
 
-        if(runs.size() > 0 ) {
-            return "redirect:results/" +runs.get(0).getRunId();
+        if (runsForResult.size() > 0) {
+            return "redirect:results/" + runsForResult.get(0).getRunId();
         } else {
             return "results";
         }
@@ -61,7 +61,8 @@ public class ParticipationController {
 
         LocalDate actualDate = LocalDate.now();
         List<Run> runs = registerService.findRunsForResult(actualDate.getYear());
-        model.addAttribute("runs", runs);
+        List<Run> runsForResult = runs.stream().filter(b -> b.isShowResult()).collect(Collectors.toList());
+        model.addAttribute("runs", runsForResult);
 
         return "results";
     }
