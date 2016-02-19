@@ -39,7 +39,7 @@
                                 <thead>
                                 <tr>
                                     <th data-sorter="false" class="col-sm-1">Platz*</th>
-                                    <th class="col-sm-1">Altersklasse</th>
+                                    <th class="filter-select col-sm-1">Altersklasse</th>
                                     <th class="col-sm-2">Vorname</th>
                                     <th data-placeholder="Tippe deinen Nachnamen ein..." class="col-sm-2">Nachname</th>
                                     <th class="col-sm-1">Jahrgang</th>
