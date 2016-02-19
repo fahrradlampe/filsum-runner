@@ -154,7 +154,7 @@
                     <div class="form-group">
                         <@spring.bind path="runnerData.runner.shirt" />
 
-                        <label class="control-label col-sm-2" for="city">T-Shirt:</label>
+                        <label class="control-label col-sm-2" for="city">T-Shirt-Größe:</label>
 
                         <div class="col-sm-10">
                             <select id="selectProduct"  name="selectedProduct"

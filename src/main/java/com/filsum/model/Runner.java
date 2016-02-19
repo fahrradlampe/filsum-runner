@@ -6,12 +6,36 @@ import org.hibernate.validator.constraints.Email;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
 @XmlRootElement
 @Table(name = "runner")
 public class Runner implements Serializable {
+
+
+    public enum AgeGroup {
+        FEMALE_YOUTH("weibliche Jugend"), FEMALE("weiblich"), MALE_YOUTH("männliche Jugend"), MALE("männlich"), AMBIGUOUS("unklar");
+
+        private String text;
+
+        AgeGroup(String text){
+            this.text = text;
+        }
+
+        public String getText() {
+            return text;
+        }
+
+        public void setText(String text) {
+            this.text = text;
+        }
+    }
+
+    public static final String FEMALE = "w";
+
+    public static final String MALE = "m";
 
     // id
     private Long runnerId;
@@ -22,7 +46,7 @@ public class Runner implements Serializable {
     // surname
     private String surname;
 
-    // gender of the person
+    // gender of the person (w or m)
     private String gender;
 
     // e-mail
@@ -38,6 +62,7 @@ public class Runner implements Serializable {
 
     private String country;
 
+    // size of the shirt
     private String shirt;
 
     private String club;
@@ -160,5 +185,23 @@ public class Runner implements Serializable {
 
     public void setClub(String club) {
         this.club = club;
+    }
+
+    @Transient
+    public String getCalculateAgeGroup(){
+        int birthyearAdult = LocalDate.now().getYear() - 18;
+        AgeGroup ageGroup;
+        if(gender.equals(FEMALE) && birthyear < birthyearAdult){
+            ageGroup = AgeGroup.FEMALE_YOUTH;
+        } else if(gender.equals(FEMALE) && birthyear >= birthyearAdult) {
+            ageGroup = AgeGroup.FEMALE;
+        } else if(gender.equals(MALE) && birthyear < birthyearAdult) {
+            ageGroup = AgeGroup.MALE_YOUTH;
+        } else if(gender.equals(MALE) && birthyear >= birthyearAdult) {
+            ageGroup = AgeGroup.MALE;
+        } else {
+            ageGroup = AgeGroup.AMBIGUOUS;
+        }
+        return ageGroup.getText();
     }
 }

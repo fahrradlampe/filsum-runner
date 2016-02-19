@@ -19,7 +19,7 @@ $(document).ready(function()
             fixedUrl: "particpantTable",
 
             // sort on the first column and third column, order asc
-            sortList: [[5,0]],
+            sortList: [[6,0]],
 
             widgetOptions: {
                 // using the default zebra striping class name, so it actually isn't included in the theme variable above
@@ -79,7 +79,7 @@ function numberResultTable(){
     var particpantTable = $("#particpantTable");
     particpantTable.find("tr:gt(0)").each(function() {
             if(!($(this).hasClass('tablesorter-ignoreRow')) && !($(this).hasClass('filtered')) ) {
-                $(this).find("td:eq(6)").text(i);
+                $(this).find("td:eq(0)").text(i);
                 i++;
             }
     });
