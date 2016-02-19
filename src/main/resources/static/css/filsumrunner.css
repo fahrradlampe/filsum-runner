@@ -108,3 +108,6 @@
     margin-left: auto;
     margin-right: auto;
 }
+select.tablesorter-filter {
+    height: 25px;
+}

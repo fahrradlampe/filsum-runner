@@ -17,7 +17,9 @@
 
 
                     <#if runs?size=0>
-                       <p>Aktuell sind keine Anmeldungen möglich.</p>
+                       <p>Aktuell sind keine Online-Anmeldungen möglich.</p>
+                        <p>Bitte drucken sie folgendes PDF für eine Nachanmeldung aus und nehmen sie es ausgefüllt mit zum Lauf.</p>
+                        <p><a target="_blank" href="images/Nachmeldung.pdf">Nachmeldung</a></p>
                     <#else>
 
                     <@spring.bind path="runnerData.selectedRun" />
