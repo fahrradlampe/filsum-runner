@@ -34,7 +34,7 @@
 
                     <div class="row col-lg-12">
                         <div class="table-responsive">
-                            <table id="particpantTable"
+                            <table id="resultTable"
                                    class="table table-striped table-hover tablesorter  table-condensed">
                                 <thead>
                                 <tr>

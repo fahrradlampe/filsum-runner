@@ -1,5 +1,40 @@
 $(document).ready(function()
     {
+        $("#resultTable").tablesorter({
+            // this will apply the bootstrap theme if "uitheme" widget is included
+            // the widgetOptions.uitheme is no longer required to be set
+            theme: "bootstrap",
+
+            widthFixed: true,
+
+            dateFormat: "ddmmyyyy",
+
+            headerTemplate: '{content} {icon}', // new in v2.7. Needed to add the bootstrap icon!
+
+            // widget code contained in the tablesorter.widgets.js file
+            // use the zebra stripe widget if you plan on hiding any rows (filter widget)
+            widgets: [ "uitheme", "filter", "zebra", "stickyHeaders" ],
+
+            // storage function works with a fixed url (for all license/copy, license/edit urls...)
+            fixedUrl: "resultTable",
+
+            // sort on the first column and third column, order asc
+            sortList: [[6,0]],
+
+            widgetOptions: {
+                // using the default zebra striping class name, so it actually isn't included in the theme variable above
+                // this is ONLY needed for bootstrap theming if you are using the filter widget, because rows are hidden
+                zebra: ["even", "odd"],
+
+                // reset filters button
+                filter_reset: ".reset",
+
+                // offset for sticky headers
+                stickyHeaders_offset : '.navbar-fixed-top'
+
+            }
+        });
+
         $("#particpantTable").tablesorter({
             // this will apply the bootstrap theme if "uitheme" widget is included
             // the widgetOptions.uitheme is no longer required to be set
@@ -62,7 +97,7 @@ $(function () {
     });
 
     numberResultTable();
-    var table = $("#particpantTable");
+    var table = $("#resultTable");
     table.bind("sortEnd",function() {
         numberResultTable();
     });
@@ -76,8 +111,8 @@ $(function () {
 
 function numberResultTable(){
     var i = 1;
-    var particpantTable = $("#particpantTable");
-    particpantTable.find("tr:gt(0)").each(function() {
+    var resultTable = $("#resultTable");
+    resultTable.find("tr:gt(0)").each(function() {
             if(!($(this).hasClass('tablesorter-ignoreRow')) && !($(this).hasClass('filtered')) ) {
                 $(this).find("td:eq(0)").text(i);
                 i++;
