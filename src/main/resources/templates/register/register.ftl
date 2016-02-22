@@ -18,7 +18,7 @@
 
                     <#if runs?size=0>
                        <p>Aktuell sind keine Online-Anmeldungen möglich.</p>
-                        <p>Bitte drucken sie folgendes PDF für eine Nachanmeldung aus und nehmen sie es ausgefüllt mit zum Lauf.</p>
+                        <p>Bitte drucke folgendes PDF für eine Nachanmeldung aus und nehme es ausgefüllt mit zum Lauf.</p>
                         <p><a target="_blank" href="images/Nachmeldung.pdf">Nachmeldung</a></p>
                     <#else>
 
@@ -156,10 +156,10 @@
                     <div class="form-group">
                         <@spring.bind path="runnerData.runner.shirt" />
 
-                        <label class="control-label col-sm-2" for="city">T-Shirt-Größe:</label>
+                        <label class="control-label col-sm-2" for="selectShirt">T-Shirt-Größe:</label>
 
                         <div class="col-sm-10">
-                            <select id="selectProduct"  name="selectedProduct"
+                            <select id="selectShirt"  name="selectShirt"
                                     class="form-control" required>
                                 <option value="s">S</option>
                                 <option value="m">M</option>

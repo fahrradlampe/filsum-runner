@@ -88,6 +88,15 @@ $(function () {
     $(document).on("click", '#actualRun', function (e) {
         var runId = e.target.getAttribute("data-runid");
         $('#selectedRun').val(runId);
+
+        // disable tshirt
+        var actualRunText = $(e.target).text();
+        if(actualRunText.indexOf("ambini") >= 0){
+            $('#selectShirt').attr('disabled', 'disabled');
+        } else {
+            $('#selectShirt').removeAttr('disabled');
+        }
+
     });
 
     // click run in result view
