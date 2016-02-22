@@ -4,7 +4,8 @@ import com.filsum.model.Participation;
 import com.filsum.model.Run;
 import com.filsum.service.ParticipationService;
 import com.filsum.service.RegisterService;
-import com.jcabi.log.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +19,9 @@ import java.util.stream.Collectors;
 @Controller
 public class ParticipationController {
 
+    private static final Logger LOG = LoggerFactory.getLogger(ParticipationController.class.getName());
+
+
     @Autowired
     private ParticipationService participationService;
 
@@ -29,7 +33,7 @@ public class ParticipationController {
      */
     @RequestMapping(value = "/participantslist")
     public String participantView(Model model) {
-        Logger.debug(this, "participants list");
+        LOG.debug("participants list");
         System.out.println("participants list start");
 
         LocalDate actualDate = LocalDate.now();
@@ -42,7 +46,7 @@ public class ParticipationController {
 
     @RequestMapping(value = "/results")
     public String resultsView() {
-        Logger.debug(this, "results list");
+        LOG.debug("results list");
         LocalDate actualDate = LocalDate.now();
         List<Run> runs = registerService.findRunsForResult(actualDate.getYear());
         List<Run> runsForResult = runs.stream().filter(b -> b.isShowResult()).collect(Collectors.toList());
@@ -56,7 +60,7 @@ public class ParticipationController {
 
     @RequestMapping(value = "/results/{runId}")
     public String resultsView(Model model, @PathVariable("runId") final Long runId) {
-        Logger.debug(this, "results list");
+        LOG.debug("results list");
 
         List<Participation> particpiants = participationService.findParticipantsWithResults(runId);
         model.addAttribute("participants", particpiants);

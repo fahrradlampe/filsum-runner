@@ -1,11 +1,12 @@
 package com.filsum.service;
 
+import com.filsum.controller.ParticipationController;
 import com.filsum.model.Participation;
 
-import com.jcabi.log.Logger;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,14 +20,16 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 @Service
 public class MailService {
+
+    private static final Logger LOG = LoggerFactory.getLogger(ParticipationController.class.getName());
 
     @Autowired
     private JavaMailSender mailSender;
@@ -51,43 +54,42 @@ public class MailService {
 
     private void sendMail(final String[] to, final String subject, final String template, final Map<String, ?> params) {
         if (!sendingEnabled) {
-            Logger.debug(this, "sending of mails disabled");
+            LOG.debug("sending of mails disabled");
             return;
         }
         else {
-            Logger.debug(this,"sending of mail enabled via server");
+            LOG.debug("sending of mail enabled via server");
         }
 
         MimeMessagePreparator preparator = new MimeMessagePreparator() {
 
             public void prepare(MimeMessage mimeMessage) throws Exception {
-                Logger.trace(this, "preparing mail...");
+                LOG.trace("preparing mail...");
 
                 MimeMessageHelper message = new MimeMessageHelper(mimeMessage, true, "UTF-8");
                 message.setTo(to);
                 message.setFrom(getFrom());
                 message.setSubject(subject);
 
-                String body = null;
                 try {
                     Template freemarkerTemplate = freeMarkerConfigurer.getConfiguration().getTemplate(template);
-                    body = FreeMarkerTemplateUtils.processTemplateIntoString(freemarkerTemplate, params);
+                    String body = FreeMarkerTemplateUtils.processTemplateIntoString(freemarkerTemplate, params);
+                    message.setText(body, true);
                 } catch (TemplateException | IOException e) {
-                    Logger.error(this, e.getMessage());
+                    LOG.error(e.getMessage());
                 }
 
-                message.setText(body, true);
             }
         };
 
-        Logger.trace(this, "sending mail...");
+        LOG.trace("sending mail...");
         try {
             mailSender.send(preparator);
         } catch (Exception ex) {
-            Logger.error(this, "Error Mail: " + ex.getMessage());
+            LOG.error("Error Mail: " + ex.getMessage());
             ex.printStackTrace();
         }
-        Logger.trace(this, "sent mail.");
+        LOG.trace( "sent mail.");
     }
 
     private InternetAddress getFrom() throws UnsupportedEncodingException {
