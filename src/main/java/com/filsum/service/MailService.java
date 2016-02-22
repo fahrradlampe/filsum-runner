@@ -49,6 +49,8 @@ public class MailService {
             throws Exception {
 
         Map<String, Object> params = new HashMap<>();
+        params.put("run", participation.getRun());
+        params.put("runner", participation.getRunner());
         sendMail(new String[]{participation.getRunner().getEmail()}, "Teilnahme an Filsum Loeppt 2016", "mail/participation.ftl", params);
     }
 

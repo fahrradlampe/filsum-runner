@@ -13,8 +13,8 @@
                 <h3 class="col-sm-14 col-sm-offset-2">Kontakt</h3>
 
                 <p class="p--standard">
-                    Holger Wollenberg<br/>
                     Holger Schulte<br/>
+                    Holger Wollenberg<br/>
                     Filsum<br/>
                     E-Mail: <a href="mailto:filsumloeppt@gmail.com">filsumloeppt@gmail.com</a><br/>
                 </p>

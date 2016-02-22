@@ -16,6 +16,7 @@
                     26849 Filsum
                 </p>
                 <h2>Vertreten durch:</h2>
+                <p>Holger Schulte</p>
                 <p>Holger Wollenberg</p>
                 <h2>Kontakt:</h2>
                 <table><tr>
