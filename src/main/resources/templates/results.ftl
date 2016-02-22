@@ -58,7 +58,7 @@
                                         <td>${participant.runner.club}</td>
                                         <td>${participant.runtime}</td>
                                         <td>
-                                            <a href="https://www.dropbox.com/sh/8ckwnaxg2ayu0kz/AAAi7PHnKNkGX_ovWWrEzgg1a/${participant.runner.forename}_${participant.runner.surname}.pdf?dl=0">Urkunde</a>
+                                            <a href="https://www.dropbox.com/sh/8ckwnaxg2ayu0kz/AAAi7PHnKNkGX_ovWWrEzgg1a?dl=0">Urkunde</a>
                                         </td>
                                     </tr>
                                     </#list>
