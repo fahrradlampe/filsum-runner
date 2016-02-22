@@ -100,6 +100,12 @@
                     Möglichkeit der
                     Onlineanmeldung zu nutzen.
                 </div>
+
+                <div class="col-sm-3">Flyer:
+                </div>
+                <div class="col-sm-7"><a href="images/Flyer.pdf">Download</a>
+                </div>
+
             </div>
 
         </div>
