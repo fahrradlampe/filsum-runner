@@ -3,7 +3,6 @@ package com.filsum.controller;
 import com.filsum.model.Run;
 import com.filsum.model.RunnerFormData;
 import com.filsum.service.RegisterService;
-import javafx.collections.transformation.SortedList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
