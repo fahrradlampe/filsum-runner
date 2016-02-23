@@ -20,6 +20,8 @@ public class Participation implements Serializable {
 
     private boolean paid = false;
 
+    private String startnumber;
+
     private Run run;
 
     private Runner runner;
@@ -67,5 +69,13 @@ public class Participation implements Serializable {
 
     public void setRuntime(String runtime) {
         this.runtime = runtime;
+    }
+
+    public String getStartnumber() {
+        return startnumber;
+    }
+
+    public void setStartnumber(String startnumber) {
+        this.startnumber = startnumber;
     }
 }

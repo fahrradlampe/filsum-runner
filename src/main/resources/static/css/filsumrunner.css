@@ -93,15 +93,14 @@
 .footer-navi ul li a {
     font-size: 0.8em;
 }
-.logo {
-    width: 600px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 .btn-filsum {
     width: 200px;
     background-image: linear-gradient(to bottom, #4B77BE 0%, #265a88 100%);
+}
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .homecontainer {
     max-width: 800px;
@@ -110,4 +109,40 @@
 }
 select.tablesorter-filter {
     height: 25px;
+}
+@media (max-width: 767px) {
+    .logo {
+        width: 300px;
+    }
+    .mapFrame {
+        width: 300px;
+        height: 200px;
+    }
+}
+@media (min-width: 768px) {
+    .logo {
+        width: 400px;
+    }
+    .mapFrame {
+        width: 640px;
+        height: 480px;
+    }
+}
+@media (min-width: 992px) {
+    .logo {
+        width: 500px;
+    }
+    .mapFrame {
+        width: 540px;
+        height: 380px;
+    }
+}
+@media (min-width: 1200px) {
+    .logo {
+        width: 600px;
+    }
+    .mapFrame {
+        width: 640px;
+        height: 480px;
+    }
 }

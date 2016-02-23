@@ -11,8 +11,7 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-7">
-                        <iframe src="https://www.google.com/maps/d/embed?mid=zxdSeBnwgT94.ktKGkeC2PZ-E" width="640"
-                                height="480"></iframe>
+                        <iframe src="https://www.google.com/maps/d/embed?mid=zxdSeBnwgT94.ktKGkeC2PZ-E" class="mapFrame"></iframe>
                     </div>
                     <div class="col-md-5">
                         <h3>Anfahrt</h3>
