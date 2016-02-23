@@ -7,15 +7,21 @@ import com.filsum.model.RunnerFormData;
 import com.filsum.repository.ParticipationRepository;
 import com.filsum.repository.RunRepository;
 import com.filsum.repository.RunnerRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class RegisterService {
+
+
+    private static final Logger LOG = LoggerFactory.getLogger(RegisterService.class.getName());
 
     @Autowired
     private RunnerRepository runnerRepository;
@@ -37,7 +43,31 @@ public class RegisterService {
         participation.setRunner(runner);
         participationRepository.save(participation);
 
-        mailService.sendParticpation(participation);
+        // create participation for bambini
+        // first day of the actual year
+        LocalDate actualDate = LocalDate.now();
+        LocalDate firstDay = LocalDate.of(actualDate.getYear(), Month.JANUARY, 1);
+        // last day of the actual year
+        LocalDate lastDay = LocalDate.of(actualDate.getYear(), Month.DECEMBER, 31);
+
+        List<Run> bambiniRun = runRepository.findByStartDateBetweenAndNameLike(firstDay, lastDay, "%ambini%");
+        List<Participation> bambinis = new ArrayList<>();
+        if(bambiniRun.size() == 1) {
+            for (Runner actBambini : runnerData.getFurtherRunners()) {
+                if (!actBambini.getForename().isEmpty() && !actBambini.getSurname().isEmpty() && actBambini.getBirthyear() != null) {
+                    Runner savedBambini = runnerRepository.save(actBambini);
+                    Participation bambiniParticipation = new Participation();
+                    bambiniParticipation.setRun(bambiniRun.get(0));
+                    bambiniParticipation.setRunner(savedBambini);
+                    participationRepository.save(bambiniParticipation);
+                    bambinis.add(bambiniParticipation);
+                }
+            }
+        } else {
+            LOG.error("No bambini run found or too much...");
+        }
+
+        mailService.sendParticpation(participation, bambinis);
 
         return participation;
     }

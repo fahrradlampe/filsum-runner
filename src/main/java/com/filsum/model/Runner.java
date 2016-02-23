@@ -67,7 +67,7 @@ public class Runner implements Serializable {
 
     private String club;
 
-    private int birthyear;
+    private Integer birthyear;
 
     private List<Participation> participation;
 
@@ -162,11 +162,11 @@ public class Runner implements Serializable {
         this.shirt = shirt;
     }
 
-    public int getBirthyear() {
+    public Integer getBirthyear() {
         return birthyear;
     }
 
-    public void setBirthyear(int birthyear) {
+    public void setBirthyear(Integer birthyear) {
         this.birthyear = birthyear;
     }
 

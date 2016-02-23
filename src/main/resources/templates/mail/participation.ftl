@@ -30,6 +30,25 @@ Bitte überprüfe zunächst, ob deine Anmeldedaten korrekt sind:  </p>
     </tr>
 </table>
 
+<#if bambinis?has_content>
+<p>Und folgende Bambinis wurden angemeldet:</p>
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <td>Name:</td>
+        <td>Jahrgang:</td>
+        <td>Verein:</td>
+    </tr>
+
+    <#list bambinis as bambini>
+    <tr>
+        <td>${bambini.runner.forename!""} ${bambini.runner.surname!""} </td>
+        <td>${bambini.runner.birthyear?c}</td>
+        <td>${bambini.runner.club!""}</td>
+    </tr>
+    </#list>
+</table>
+</#if>
+
 <p>
 Solltest du Änderungen in den Anmeldedaten wünschen, dann schicke uns bitte eine E-Mail an: filsumloeppt@gmail.com unter Angabe deines Namens und den gewünschten Anpassungen.
 Sind alle Anmeldedaten nach deinen Wünschen, dann überweise bitte den Betrag von ${run.charge!""} Euro auf folgendes Konto:  </p>

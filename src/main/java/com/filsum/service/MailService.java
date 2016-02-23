@@ -21,6 +21,7 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.mail.internet.InternetAddress;
@@ -45,13 +46,15 @@ public class MailService {
     private Environment env;
 
 
-    public void sendParticpation(Participation participation)
+    public void sendParticpation(Participation participation, List<Participation> bambinis)
             throws Exception {
 
         Map<String, Object> params = new HashMap<>();
         params.put("run", participation.getRun());
         params.put("runner", participation.getRunner());
-        sendMail(new String[]{participation.getRunner().getEmail()}, "Teilnahme an Filsum Loeppt 2016", "mail/participation.ftl", params);
+        params.put("bambinis", bambinis);
+        sendMail(new String[] {participation.getRunner().getEmail()}, "Teilnahme an Filsum Loeppt 2016", "mail/participation.ftl",
+                params);
     }
 
     private void sendMail(final String[] to, final String subject, final String template, final Map<String, ?> params) {

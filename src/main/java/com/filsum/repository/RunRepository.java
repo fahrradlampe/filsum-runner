@@ -13,4 +13,6 @@ public interface RunRepository extends JpaRepository<Run, Long> {
     List<Run> findByparticipationDeadlineAfter(LocalDate date);
 
     List<Run> findByStartDateBetween(LocalDate start, LocalDate end);
+
+    List<Run> findByStartDateBetweenAndNameLike(LocalDate start, LocalDate end, String name);
 }

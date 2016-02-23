@@ -92,9 +92,9 @@ $(function () {
         // disable tshirt
         var actualRunText = $(e.target).text();
         if(actualRunText.indexOf("ambini") >= 0){
-            $('#selectShirt').attr('disabled', 'disabled');
+            $('.selectedShirt').attr('disabled', 'disabled');
         } else {
-            $('#selectShirt').removeAttr('disabled');
+            $('.selectedShirt').removeAttr('disabled');
         }
 
     });

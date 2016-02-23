@@ -45,14 +45,16 @@ public class RegisterController {
 
     @RequestMapping(value = "/register/add", method = RequestMethod.POST)
     public String registerAdd(Model model, @ModelAttribute("runnerData") @Valid RunnerFormData runnerData,
-            BindingResult bindingResult)
-
-            throws Exception {
+            BindingResult bindingResult) throws Exception {
         LOG.debug("add new runner");
 
         if (bindingResult.hasErrors()) {
+            LOG.error("Binding errors: " + bindingResult.getErrorCount());
             List<Run> runs = registerService.findRunsToRegister();
             model.addAttribute("runs", runs);
+
+            model.addAttribute("runnerData", new RunnerFormData());
+            model.addAttribute("availShirts", availShirts);
             return "register/register";
         }
 
