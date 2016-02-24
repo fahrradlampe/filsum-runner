@@ -8,7 +8,7 @@
 <div class="container">
 
 
-    <div class="alert alert-success" role="alert">Glückwunsch! Du hast dich erfolgreich angemeldet!</div>
+    <div class="alert alert-success" role="alert">Glückwunsch! Du hast Dich erfolgreich angemeldet!</div>
 
 
 

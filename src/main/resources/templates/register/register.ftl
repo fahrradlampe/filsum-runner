@@ -209,7 +209,7 @@
 
                                                     <label for="inputCheck"> Mit einer Anmeldung erkennt der Teilnehmer den
                                                         Haftungsausschluss des Veranstalters für Schäden jeglicher Art an.
-                                                        Nach Anmeldung erhalten Sie eine Anmeldebestätigung per Email mit allen
+                                                        Nach Anmeldung erhälst du eine Anmeldebestätigung per E-Mail mit allen
                                                         Meldedaten und einer Zahlungsaufforderung.
                                                         Erst nach Zahlungseingang auf das dort genannte Konto erfolgt eine Aufnahme
                                                         in die Teilnehmerliste.
@@ -226,6 +226,9 @@
 
                             <!-- further runner data -->
 
+                            <div class="alert alert-info" role="alert">
+                                Zusätzlich zu Deinem Lauf hast du hier die Möglichkeit Kinder zu unserem kostenlosem Bambinilauf anzumelden</h5>
+                            </div>
                             <#list runnerData.furtherRunners as item>
                             <#assign actualRunnerId>runnerData.furtherRunners[${item_index}].runnerId</#assign>
                             <@spring.bind actualRunnerId />
@@ -234,7 +237,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="überschriftEins">
                                         <h4 class="panel-title">
-                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse${item_index}"
+                                            <a role="button" data-toggle="collapse" href="#collapse${item_index}"
                                                aria-expanded="false" aria-controls"collapse${item_index}">
                                             Weiteren Läufer für den Bambini-Lauf anmelden
                                             </a>

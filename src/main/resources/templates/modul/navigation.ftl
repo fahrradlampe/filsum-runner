@@ -22,7 +22,7 @@
                 <li class="register"><a href="/register">Anmeldung</a></li>
                 <li class="participantslist"><a href="/participantslist">Teilnehmerliste</a></li>
                 <li class="sponsor"><a href="/sponsor">Sponsoren</a></li>
-                <li class="map"><a href="/map">Anfahrt</a></li>
+                <li class="map"><a href="/map">Streckenplan</a></li>
                 <li class="results"><a href="/results">Ergebnisse</a></li>
                 <li class="images"><a id="imagesLink" href="/images">Bilder</a></li>
                 <li class="contact"><a href="/contact">Kontakt</a></li>

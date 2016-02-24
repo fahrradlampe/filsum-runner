@@ -20,8 +20,6 @@ public class RunnerFormData {
         furtherRunners.add(new Runner());
         furtherRunners.add(new Runner());
         furtherRunners.add(new Runner());
-        furtherRunners.add(new Runner());
-        furtherRunners.add(new Runner());
     }
 
     public Runner getRunner() {
