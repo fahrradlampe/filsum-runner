@@ -59,12 +59,16 @@ Sind alle Anmeldedaten nach deinen Wünschen, dann überweise bitte den Betrag v
         <td>Sportverein Blau Weiss Filsum e.V. 	</td>
     </tr>
     <tr>
+        <td>Bank:</td>
+        <td>Raiffeisen-Volksbank eG </td>
+    </tr>
+    <tr>
         <td>IBAN:</td>
-        <td> </td>
+        <td>DE77 285 62297 7200 58 6601 </td>
     </tr>
     <tr>
         <td>BIC:</td>
-        <td></td>
+        <td>GENODEF1UPL</td>
     </tr>
     <tr>
         <td>Betrag:</td>
