@@ -4,7 +4,7 @@
 
 <p>Moin,</p>
 <p>
-Vielen Dank, dass du an unserer Veranstaltung „Filsum löppt“ teilnehmen möchtest.
+Vielen Dank, dass du an unserer Veranstaltung „Filsum löppt“ am 24.06.2016 teilnehmen möchtest.
 Bitte überprüfe zunächst, ob deine Anmeldedaten korrekt sind:  </p>
 
 <table border="1" cellpadding="5" cellspacing="0">
