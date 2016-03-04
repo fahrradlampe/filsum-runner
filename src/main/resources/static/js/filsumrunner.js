@@ -128,7 +128,7 @@ $(function () {
 
 });
 
-function numberResultTable(var changeTable){
+function numberResultTable(changeTable){
     var i = 1;
     changeTable.find("tr:gt(0)").each(function() {
             if(!($(this).hasClass('tablesorter-ignoreRow')) && !($(this).hasClass('filtered')) ) {
