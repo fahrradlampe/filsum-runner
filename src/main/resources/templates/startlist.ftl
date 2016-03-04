@@ -29,6 +29,7 @@
                             <tbody>
                                 <#list participants as participant>
                                 <tr>
+                                    <td> </td>
                                     <td>${participant.runner.forename}</td>
                                     <td>${participant.runner.surname}</td>
                                     <td>${participant.runner.club}</td>

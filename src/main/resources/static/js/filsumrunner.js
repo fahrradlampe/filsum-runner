@@ -105,32 +105,32 @@ $(function () {
         window.location.href = "/results/" + runId;
     });
 
-    numberResultTable();
     var table = $("#resultTable");
+    numberResultTable(table);
     table.bind("sortEnd",function() {
-        numberResultTable();
+        numberResultTable(table);
     });
 
     table.bind("filterEnd",function() {
-        numberResultTable();
+        numberResultTable(table);
     });
 
     var parTable = $("#particpantTable");
+    numberResultTable(parTable);
     parTable.bind("sortEnd",function() {
-        numberResultTable();
+        numberResultTable(parTable);
     });
 
     parTable.bind("filterEnd",function() {
-        numberResultTable();
+        numberResultTable(parTable);
     });
 
 
 });
 
-function numberResultTable(){
+function numberResultTable(var changeTable){
     var i = 1;
-    var resultTable = $("#resultTable");
-    resultTable.find("tr:gt(0)").each(function() {
+    changeTable.find("tr:gt(0)").each(function() {
             if(!($(this).hasClass('tablesorter-ignoreRow')) && !($(this).hasClass('filtered')) ) {
                 $(this).find("td:eq(0)").text(i);
                 i++;
