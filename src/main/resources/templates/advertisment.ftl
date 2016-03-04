@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="col-sm-3">Strecken / Startzeiten:</div>
-                <div class="col-sm-7">18:30 Uhr: Bambinilauf ca. 600m <br/>
+                <div class="col-sm-7">18:30 Uhr: Bambinilauf ca. 750m <br/>
                     19:00 Uhr: gemeinsamer Start 5 km, 10km, 5km Walking
                 </div>
 
