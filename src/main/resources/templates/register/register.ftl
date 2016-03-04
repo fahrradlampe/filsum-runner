@@ -39,8 +39,6 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="überschrift">
                                         <h3 class="col-sm-offset-2">Anmeldung</h3>
-                                        <h4 class="panel-title col-sm-offset-2">Hauptläufer
-                                        </h4>
                                     </div>
                                     <div class="panel-collapse">
                                         <div class="panel-body">

@@ -16,7 +16,7 @@ public class Runner implements Serializable {
 
 
     public enum AgeGroup {
-        FEMALE_YOUTH("WU18"), FEMALE("WHK"), MALE_YOUTH("MU18"), MALE("MHK"), AMBIGUOUS("U");
+        FEMALE_YOUTH("WU18"), FEMALE("W."), MALE_YOUTH("MU18"), MALE("M."), AMBIGUOUS("U");
 
         private String text;
 
