@@ -115,6 +115,15 @@ $(function () {
         numberResultTable();
     });
 
+    var parTable = $("#particpantTable");
+    parTable.bind("sortEnd",function() {
+        numberResultTable();
+    });
+
+    parTable.bind("filterEnd",function() {
+        numberResultTable();
+    });
+
 
 });
 

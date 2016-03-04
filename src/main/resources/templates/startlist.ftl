@@ -18,6 +18,7 @@
                                class="table table-striped table-hover tablesorter table-responsive table-condensed">
                             <thead>
                             <tr>
+                                <th data-sorter="false" class="col-sm-1">lfd. Nr.</th>
                                 <th width="20%">Vorname</th>
                                 <th data-placeholder="Tippe deinen Nachnamen ein..." width="20%">Nachname</th>
                                 <th width="8%">Verein</th>
