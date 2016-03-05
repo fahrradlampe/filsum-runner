@@ -13,6 +13,10 @@
                   method="post">
 
                 <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="überschrift">
+                     <h3 class="text-center">Anmeldung zum 4ten Filsum Löppt</h3>
+                </div>
+
                     <div class="panel-body">
 
 
@@ -34,12 +38,6 @@
                             <@spring.bind "runnerData" />
 
 
-
-                            <div class="panel-group">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab" id="überschrift">
-                                        <h3 class="col-sm-offset-5">Anmeldung</h3>
-                                    </div>
                                     <div class="panel-collapse">
                                         <div class="panel-body">
 
@@ -219,8 +217,7 @@
 
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+
 
                             <!-- further runner data -->
 

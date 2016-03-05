@@ -9,7 +9,7 @@
 
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="überschrift">
-                <h3 class="col-xs-offset-4">Informationen 4.Filsum löppt</h3>
+                <h3 class="text-center">Informationen 4.Filsum löppt</h3>
             </div>
             <div class="panel-body">
 
