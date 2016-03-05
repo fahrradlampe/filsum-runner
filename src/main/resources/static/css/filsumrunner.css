@@ -138,6 +138,17 @@ select.tablesorter-filter {
     .media-logo {
         width: 200px;
     }
+    .thumbnail {
+        min-height: 130px;
+    }
+    .thumbnail {
+        display: flex;
+        align-items: center
+    }
+
+    .thumbnail a > img {
+        margin: 0;
+    }
 }
 @media (min-width: 992px) {
     .logo {
@@ -150,6 +161,17 @@ select.tablesorter-filter {
     .media-logo {
         width: 200px;
     }
+    .thumbnail {
+        min-height: 90px;
+    }
+    .thumbnail {
+        display: flex;
+        align-items: center
+    }
+
+    .thumbnail a > img {
+        margin: 0;
+    }
 }
 @media (min-width: 1200px) {
     .logo {
@@ -161,5 +183,16 @@ select.tablesorter-filter {
     }
     .media-logo {
         width: 200px;
+    }
+    .thumbnail {
+        min-height: 90px;
+    }
+    .thumbnail {
+        display: flex;
+        align-items: center
+    }
+
+    .thumbnail a > img {
+        margin: 0;
     }
 }

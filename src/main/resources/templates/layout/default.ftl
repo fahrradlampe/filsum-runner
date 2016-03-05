@@ -30,6 +30,8 @@
 
 <div class="container">
 <div id="footer">
+
+
     <div class="footer-navi">
         <ul>
             <li class="first">Currently 1.0.0, 24.02.2016 </li>
