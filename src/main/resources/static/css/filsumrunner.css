@@ -19,6 +19,10 @@
 }
 .navbar-default .navbar-nav > li > a {
     color: #1D1B1B;
+    border-radius: 6px;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .active > a {
+    background-image: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
 }
 .main{
     background: url(../images/laeufer_hintergrund_klein.jpg) no-repeat  center fixed;
