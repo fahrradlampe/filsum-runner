@@ -54,6 +54,9 @@
                 </div>
             </div>
         </div>
+
+        <#include "/modul/sponsorList.ftl" />
+
     </div>
 </div>
 

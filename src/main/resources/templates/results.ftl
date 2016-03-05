@@ -84,4 +84,9 @@
             </#if>
         </div>
 
+        <#include "/modul/sponsorList.ftl" />
+
+    </div>
+    </div>
+
 </@layout.default>

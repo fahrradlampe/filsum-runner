@@ -327,6 +327,10 @@
             </form>
         </div>
 
+        <#if runs?size=0>
+            <#include "../modul/sponsorList.ftl" />
+        </#if>
+
     </div>
 </div>
 
