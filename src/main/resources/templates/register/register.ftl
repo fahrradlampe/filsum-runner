@@ -14,7 +14,7 @@
 
                 <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="überschrift">
-                     <h3 class="text-center">Anmeldung zum 4ten Filsum Löppt</h3>
+                     <h3 class="text-center">Anmeldung zum 4. Filsum löppt</h3>
                 </div>
 
                     <div class="panel-body">
