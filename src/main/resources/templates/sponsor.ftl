@@ -88,7 +88,7 @@
                                 Reithmoorweg 17 <br>
                                 26849 Filsum<br>
                                 Tel.: 04957 – 8231<br>
-                                Fax.: 04957 - 912092 <br>
+                                Fax.: 04957 - 912 09 2 <br>
                             </div>
                         </li>
                     </ul>
@@ -107,7 +107,7 @@
                                 <h4 class="media-heading">Dentallabor Schulte Dental</h4>
                                 Am Burgplatz 16   <br>
                                 26849 Filsum<br>
-                                Tel.: 04957 – 2123259  <br>
+                                Tel.: 04957 – 212 32 59  <br>
                             </div>
                         </li>
                     </ul>

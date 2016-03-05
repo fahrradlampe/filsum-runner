@@ -41,7 +41,7 @@
 
                <div class="col-sm-4 col-md-2">
                    <div class="thumbnail">
-                      <a href="http://www.schmidt-bauunternehmung.de">
+                      <a class="text-center" href="http://www.schmidt-bauunternehmung.de">
                           <img class="media-logo-small" src="../images/Logo_Focke_Schmidt_nurLogo_9cm.png" alt="Focke Schmidt">
                       </a>
                    </div>
