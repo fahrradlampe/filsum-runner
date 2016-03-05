@@ -43,6 +43,7 @@
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
     margin-top: 20px;
+    min-height: 160px;
 }
 /* rows hidden by filtering (needed for child rows) */
 .tablesorter .filtered {
@@ -119,7 +120,7 @@ select.tablesorter-filter {
         height: 200px;
     }
     .media-logo {
-        width: 150px;
+        width: 200px;
     }
 }
 @media (min-width: 768px) {
@@ -143,7 +144,7 @@ select.tablesorter-filter {
         height: 380px;
     }
     .media-logo {
-        width: 300px;
+        width: 200px;
     }
 }
 @media (min-width: 1200px) {
@@ -155,6 +156,6 @@ select.tablesorter-filter {
         height: 480px;
     }
     .media-logo {
-        width: 400px;
+        width: 200px;
     }
 }

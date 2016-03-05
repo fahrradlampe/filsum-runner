@@ -8,16 +8,14 @@
     <div class="container">
 
         <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="überschrift">
+                <h3 class="col-xs-offset-5">Bilder 2016</h3>
+            </div>
             <div class="panel-body">
-
-                <h3 class="col-sm-14 col-sm-offset-0">Bilder 2016</h3>
 
                 <div id="imageslinks">
 
                 </div>
-
-
-
 
             </div>
         </div>

@@ -8,12 +8,15 @@
     <div class="container">
 
         <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="überschrift">
+                <h3 class="col-xs-offset-5">Sponsoren</h3>
+            </div>
+
             <div class="panel-body">
 
-                <h3 class="col-xs-12 col-xs-offset-2">Sponsoren</h3>
 
 
-                <div class="col-xs-10 col-xs-offset-2 boxline">
+                <div class="col-md-6 boxline">
                 <ul class="media-list">
                     <li class="media">
                         <div class="media-left">
@@ -26,13 +29,14 @@
                             Osterende 10 – 12       <br>
                             26849 Filsum   <br>
                             Tel.: 04957 – 357   <br>
-                            Internet: <a href="http://www.ford-debuhr-filsum.de"> www.ford-debuhr-filsum.de</a>    <br>
+                            <a href="http://www.ford-debuhr-filsum.de"> www.ford-debuhr-filsum.de</a>    <br>
                         </div>
                     </li>
                 </ul>
                 </div>
 
-                <div class="col-xs-10 col-xs-offset-2 boxline">
+
+                <div class="col-md-6 boxline">
                 <ul class="media-list">
                     <li class="media">
                         <div class="media-left">
@@ -46,13 +50,14 @@
                             Osterende 8     <br>
                             26849 Filsum<br>
                             Tel.: 04957 – 927 65 85    <br>
-                            Internet: <a href="http://www.cramers-filsum.de"> www.cramers-filsum.de</a>  <br>
+                            <a href="http://www.cramers-filsum.de"> www.cramers-filsum.de</a>  <br>
                         </div>
                     </li>
                 </ul>
                 </div>
 
-                <div class="col-xs-10 col-xs-offset-2 boxline">
+
+                <div class="col-md-6 boxline">
                     <ul class="media-list">
                         <li class="media">
                             <div class="media-left">
@@ -65,32 +70,33 @@
                                 Gewerbegebiet – An der Bahn 8    <br>
                                 26849 Filsum<br>
                                 Tel.: 04957 – 8167   <br>
-                                Internet: <a href="http://www.smb-haustueren.de"> www.smb-haustueren.de</a>  <br>
+                                <a href="http://www.smb-haustueren.de"> www.smb-haustueren.de</a>  <br>
                             </div>
                         </li>
                     </ul>
                 </div>
 
-                <div class="col-xs-10 col-xs-offset-2 boxline">
+                <div class="col-md-6 boxline">
                     <ul class="media-list">
                         <li class="media">
                             <div class="media-left">
-                                <a href="http://www.schmidt-bauunternehmung.de">
-                                    <img class="media-logo" src="../images/Logo_Focke_Schmidt_9cm.png" alt="Focke Schmidt">
-                                </a>
+                                <img class="media-logo" src="../images/Logo_Pleis_9cm.png" alt="Dentallabor Schulte Dental">
                             </div>
+
                             <div class="media-body">
-                                <h4 class="media-heading">Bauunternehmen Focke Schmidt GmbH</h4>
-                                Auf dem Brink 7   <br>
+                                <h4 class="media-heading">Gregor Pleis Elektroinstallation</h4>
+                                Reithmoorweg 17 <br>
                                 26849 Filsum<br>
-                                Tel.: 04957 – 361  <br>
-                                Internet: <a href="http://www.schmidt-bauunternehmung.de"> www.schmidt-bauunternehmung.de</a>  <br>
+                                Tel.: 04957 – 8231<br>
+                                Fax.: 04957 - 912092 <br>
                             </div>
                         </li>
                     </ul>
                 </div>
 
-                <div class="col-xs-10 col-xs-offset-2 boxline">
+
+
+                <div class="col-md-6 boxline">
                     <ul class="media-list">
                         <li class="media">
                             <div class="media-left">
@@ -107,25 +113,26 @@
                     </ul>
                 </div>
 
-                 <div class="col-xs-10 col-xs-offset-2 boxline">
-                    <ul class="media-list">
-                        <li class="media">
-                            <div class="media-left">
 
-                                <img class="media-logo" src="../images/Logo_Pleis_9cm.png" alt="Dentallabor Schulte Dental">
-
-                            </div>
-
-                            <div class="media-body">
-                                <h4 class="media-heading">Gregor Pleis Elektroinstallation</h4>
-                                Reithmoorweg 17 <br>
-                                26849 Filsum<br>
-                                Tel.: 04957 – 8231<br>
-                                Fax.: 04957 - 912092 <br>
-                            </div>
-                        </li>
-                    </ul>
+                 <div class="col-md-6 boxline">
+                     <ul class="media-list">
+                         <li class="media">
+                             <div class="media-left">
+                                 <a href="http://www.schmidt-bauunternehmung.de">
+                                     <img class="media-logo" src="../images/Logo_Focke_Schmidt_9cm.png" alt="Focke Schmidt">
+                                 </a>
+                             </div>
+                             <div class="media-body">
+                                 <h4 class="media-heading">Bauunternehmen Focke Schmidt GmbH</h4>
+                                 Auf dem Brink 7   <br>
+                                 26849 Filsum<br>
+                                 Tel.: 04957 – 361  <br>
+                                 <a href="http://www.schmidt-bauunternehmung.de"> www.schmidt-bauunternehmung.de</a>  <br>
+                             </div>
+                         </li>
+                     </ul>
                  </div>
+
 
             </div>
         </div>

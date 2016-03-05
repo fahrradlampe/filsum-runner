@@ -8,9 +8,13 @@
     <div class="container">
 
         <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="überschrift">
+                <h3 class="col-xs-offset-5">Ergebnisse</h3>
+            </div>
+
             <div class="panel-body">
 
-                <h3 class="col-sm-14 col-sm-offset-0">Ergebnisse</h3>
+
 
 
                 <ul name="runs" id="runs" class="nav nav-pills registration">

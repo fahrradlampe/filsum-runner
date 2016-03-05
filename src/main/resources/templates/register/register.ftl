@@ -38,7 +38,7 @@
                             <div class="panel-group">
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="überschrift">
-                                        <h3 class="col-sm-offset-2">Anmeldung</h3>
+                                        <h3 class="col-sm-offset-5">Anmeldung</h3>
                                     </div>
                                     <div class="panel-collapse">
                                         <div class="panel-body">

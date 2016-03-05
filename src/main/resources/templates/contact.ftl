@@ -8,9 +8,10 @@
     <div class="container">
 
         <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="überschrift">
+                <h3 class="col-xs-offset-5">Kontakt</h3>
+            </div>
             <div class="panel-body">
-
-                <h3 class="col-sm-14 col-sm-offset-2">Kontakt</h3>
 
                 <p class="p--standard">
                     Holger Schulte<br/>
