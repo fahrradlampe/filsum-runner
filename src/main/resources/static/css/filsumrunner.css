@@ -108,12 +108,14 @@
     margin-right: auto;
 }
 .homecontainer {
-    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 select.tablesorter-filter {
     height: 25px;
+}
+.jumbotron {
+    margin-bottom: 20px;
 }
 @media (max-width: 767px) {
     .logo {
@@ -185,7 +187,7 @@ select.tablesorter-filter {
         width: 200px;
     }
     .thumbnail {
-        min-height: 90px;
+        min-height: 110px;
     }
     .thumbnail {
         display: flex;

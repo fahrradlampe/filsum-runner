@@ -7,7 +7,6 @@
 <div class="main">
     <div class="container">
 
-
         <div class="jumbotron homecontainer">
             <div class="container">
                 <img class="logo img-responsive center-block" src="../../images/logo_filsum_loeppt.gif">
