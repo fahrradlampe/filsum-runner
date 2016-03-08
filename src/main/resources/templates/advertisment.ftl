@@ -91,7 +91,7 @@
 
                 <div class="col-sm-3">Anmeldung:
                 </div>
-                <div class="col-sm-7">Die Veranstaltung ist beim Deutschen Leichtathletik-Verband (DLV) angemeldet.
+                <div class="col-sm-7">Die Veranstaltung ist beim Niedersächsischem Leichtathletik-Verband (NLV) angemeldet.
                 </div>
 
                 <div class="col-sm-3">Allgemeines:
